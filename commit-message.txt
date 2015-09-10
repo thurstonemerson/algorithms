@@ -1,1 +1,1 @@
-Algorithm AddTwoNumberList from Elements of Programming Interviews, for comparison purposes only
+Algorithm AnonymousLetter from Elements of Programming Interviews, for comparison purposes only
