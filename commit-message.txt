@@ -1,1 +1,1 @@
-Algorithm ApproximateSort from Elements of Programming Interviews, for comparison purposes only
+Algorithm Arbitrage from Elements of Programming Interviews, for comparison purposes only
