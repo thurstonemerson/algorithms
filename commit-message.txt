@@ -1,1 +1,1 @@
-Algorithm AverageTop3Scores from Elements of Programming Interviews, for comparison purposes only
+Algorithm BadArrayListStore from Elements of Programming Interviews, for comparison purposes only
