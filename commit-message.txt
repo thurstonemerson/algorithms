@@ -1,1 +1,1 @@
-Algorithm BalancedBinaryTree from Elements of Programming Interviews, for comparison purposes only
+Algorithm BasicStaticInitializer from Elements of Programming Interviews, for comparison purposes only
