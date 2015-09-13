@@ -1,1 +1,1 @@
-Algorithm BadArrayStore from Elements of Programming Interviews, for comparison purposes only
+Algorithm BalancedBinaryTree from Elements of Programming Interviews, for comparison purposes only
