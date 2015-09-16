@@ -1,1 +1,1 @@
-Algorithm BinarySearchCircularArray from Elements of Programming Interviews, for comparison purposes only
+Algorithm BinarySearchCircularArrayWithDuplicates from Elements of Programming Interviews, for comparison purposes only
