@@ -1,1 +1,1 @@
-Algorithm BinarySearchAiEqI from Elements of Programming Interviews, for comparison purposes only
+Algorithm BinarySearchCircularArray from Elements of Programming Interviews, for comparison purposes only
