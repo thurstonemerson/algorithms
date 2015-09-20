@@ -1,1 +1,1 @@
-Algorithm BinarySearchFirstK from Elements of Programming Interviews, for comparison purposes only
+Algorithm BinarySearchTreePrototypeTemplate from Elements of Programming Interviews, for comparison purposes only
