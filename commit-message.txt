@@ -1,1 +1,1 @@
-Algorithm BinaryTreePreorderTraversalIterative from Elements of Programming Interviews, for comparison purposes only
+Algorithm BinaryTreePrototypeTemplate from Elements of Programming Interviews, for comparison purposes only
