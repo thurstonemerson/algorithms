@@ -1,1 +1,1 @@
-Algorithm BinaryTreePostorderTraversalIterativeAlternative from Elements of Programming Interviews, for comparison purposes only
+Algorithm BinaryTreePreorderTraversalIterative from Elements of Programming Interviews, for comparison purposes only
