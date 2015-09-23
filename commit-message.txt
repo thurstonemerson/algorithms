@@ -1,1 +1,1 @@
-Algorithm BinaryTreePrototypeTemplate from Elements of Programming Interviews, for comparison purposes only
+Algorithm Bonus from Elements of Programming Interviews, for comparison purposes only
