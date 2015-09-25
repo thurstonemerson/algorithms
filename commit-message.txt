@@ -1,1 +1,1 @@
-Algorithm Bonus from Elements of Programming Interviews, for comparison purposes only
+Algorithm BonusImproved from Elements of Programming Interviews, for comparison purposes only
