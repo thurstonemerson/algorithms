@@ -1,1 +1,1 @@
-Algorithm BuyAndSellStockTwice from Elements of Programming Interviews, for comparison purposes only
+Algorithm CanStringBePalindromeHash from Elements of Programming Interviews, for comparison purposes only
