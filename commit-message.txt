@@ -1,1 +1,1 @@
-Algorithm CheckingCycleAlternative from Elements of Programming Interviews, for comparison purposes only
+Algorithm CircularQueue from Elements of Programming Interviews, for comparison purposes only
