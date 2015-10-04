@@ -1,1 +1,1 @@
-Algorithm CircularQueue from Elements of Programming Interviews, for comparison purposes only
+Algorithm CloneGraph from Elements of Programming Interviews, for comparison purposes only
