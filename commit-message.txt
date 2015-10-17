@@ -1,1 +1,1 @@
-Algorithm ConvertBase from Elements of Programming Interviews, for comparison purposes only
+Algorithm CopyingPostingsList from Elements of Programming Interviews, for comparison purposes only
