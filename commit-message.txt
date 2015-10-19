@@ -1,1 +1,1 @@
-Algorithm DeletionList from Elements of Programming Interviews, for comparison purposes only
+Algorithm DescendantAndAncestor from Elements of Programming Interviews, for comparison purposes only
