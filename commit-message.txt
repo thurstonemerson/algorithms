@@ -1,1 +1,1 @@
-Algorithm CyclicRightShift from Elements of Programming Interviews, for comparison purposes only
+Algorithm DeletionList from Elements of Programming Interviews, for comparison purposes only
