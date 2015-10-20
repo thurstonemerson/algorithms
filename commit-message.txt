@@ -1,1 +1,1 @@
-Algorithm Division from Elements of Programming Interviews, for comparison purposes only
+Algorithm DrawingSkylinesAlternative from Elements of Programming Interviews, for comparison purposes only
