@@ -1,1 +1,1 @@
-Algorithm DrawingSkylinesAlternative from Elements of Programming Interviews, for comparison purposes only
+Algorithm DutchNationalFlag from Elements of Programming Interviews, for comparison purposes only
