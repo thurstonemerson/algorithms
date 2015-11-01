@@ -1,1 +1,1 @@
-Algorithm Fibonacci from Elements of Programming Interviews, for comparison purposes only
+Algorithm FindElementAppearsOnce from Elements of Programming Interviews, for comparison purposes only
