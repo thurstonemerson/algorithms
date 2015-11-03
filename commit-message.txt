@@ -1,1 +1,1 @@
-Algorithm FindingMinMax from Elements of Programming Interviews, for comparison purposes only
+Algorithm FindKLargestBST from Elements of Programming Interviews, for comparison purposes only
