@@ -1,1 +1,1 @@
-Algorithm FindMissingAndDuplicateXOR from Elements of Programming Interviews, for comparison purposes only
+Algorithm FirstMissingPositive from Elements of Programming Interviews, for comparison purposes only
