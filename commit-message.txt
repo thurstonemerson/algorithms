@@ -1,1 +1,1 @@
-Algorithm GeneratingABSqrt2 from Elements of Programming Interviews, for comparison purposes only
+Algorithm GeneratingABSqrt2Improved from Elements of Programming Interviews, for comparison purposes only
