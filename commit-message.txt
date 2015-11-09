@@ -1,1 +1,1 @@
-Algorithm GrayCode from Elements of Programming Interviews, for comparison purposes only
+Algorithm GrayCodeBacktrack from Elements of Programming Interviews, for comparison purposes only
