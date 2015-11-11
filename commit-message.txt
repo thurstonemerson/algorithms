@@ -1,1 +1,1 @@
-Algorithm HuffmanEncoding from Elements of Programming Interviews, for comparison purposes only
+Algorithm InorderTraversalWithParent from Elements of Programming Interviews, for comparison purposes only
