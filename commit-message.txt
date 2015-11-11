@@ -1,1 +1,1 @@
-Algorithm HashDictionary from Elements of Programming Interviews, for comparison purposes only
+Algorithm HeightDetermination from Elements of Programming Interviews, for comparison purposes only
