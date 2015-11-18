@@ -1,1 +1,1 @@
-Algorithm IntersectSortedArrays2 from Elements of Programming Interviews, for comparison purposes only
+Algorithm IntersectSortedArrays3 from Elements of Programming Interviews, for comparison purposes only
