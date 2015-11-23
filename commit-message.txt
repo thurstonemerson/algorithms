@@ -1,1 +1,1 @@
-Algorithm KLargestElementsBinaryHeap from Elements of Programming Interviews, for comparison purposes only
+Algorithm KthLargestElementLargeN from Elements of Programming Interviews, for comparison purposes only
