@@ -1,1 +1,1 @@
-Algorithm KThNodeBinaryTree from Elements of Programming Interviews, for comparison purposes only
+Algorithm LargestRectangleUnderSkyline from Elements of Programming Interviews, for comparison purposes only
