@@ -1,1 +1,1 @@
-Algorithm LockOrderingWorks from Elements of Programming Interviews, for comparison purposes only
+Algorithm LongestContainedRange from Elements of Programming Interviews, for comparison purposes only
