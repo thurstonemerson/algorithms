@@ -1,1 +1,1 @@
-Algorithm LongestContainedRange from Elements of Programming Interviews, for comparison purposes only
+Algorithm LongestIncreasingSubarray from Elements of Programming Interviews, for comparison purposes only
