@@ -1,1 +1,1 @@
-Algorithm LongestIncreasingSubarray from Elements of Programming Interviews, for comparison purposes only
+Algorithm LongestNondecreasingSubsequenceN2 from Elements of Programming Interviews, for comparison purposes only
