@@ -1,1 +1,1 @@
-Algorithm LongestSubarrayKImproved from Elements of Programming Interviews, for comparison purposes only
+Algorithm LongestSubarrayWithDistinctEntries from Elements of Programming Interviews, for comparison purposes only
