@@ -1,1 +1,1 @@
-Algorithm MatrixRotationConstant from Elements of Programming Interviews, for comparison purposes only
+Algorithm MatrixRotationNaive from Elements of Programming Interviews, for comparison purposes only
