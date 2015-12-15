@@ -1,1 +1,1 @@
-Algorithm MaxSubmatrixRectangleImproved from Elements of Programming Interviews, for comparison purposes only
+Algorithm MaxSubmatrixSquare from Elements of Programming Interviews, for comparison purposes only
