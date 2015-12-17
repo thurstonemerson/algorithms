@@ -1,1 +1,1 @@
-Algorithm MazeGame from Elements of Programming Interviews, for comparison purposes only
+Algorithm MazeGameMain from Elements of Programming Interviews, for comparison purposes only
