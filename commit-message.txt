@@ -1,1 +1,1 @@
-Algorithm MazeGameMain from Elements of Programming Interviews, for comparison purposes only
+Algorithm MergeSortedArrays from Elements of Programming Interviews, for comparison purposes only
