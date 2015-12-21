@@ -1,1 +1,1 @@
-Algorithm MergeTwoBSTs from Elements of Programming Interviews, for comparison purposes only
+Algorithm MergeTwoSortedArraysInPlace from Elements of Programming Interviews, for comparison purposes only
