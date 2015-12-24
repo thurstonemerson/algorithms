@@ -1,1 +1,1 @@
-Algorithm MissingElement from Elements of Programming Interviews, for comparison purposes only
+Algorithm MultiplyShiftAdd from Elements of Programming Interviews, for comparison purposes only
