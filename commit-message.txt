@@ -1,1 +1,1 @@
-Algorithm NumberSteps from Elements of Programming Interviews, for comparison purposes only
+Algorithm NumberWays from Elements of Programming Interviews, for comparison purposes only
