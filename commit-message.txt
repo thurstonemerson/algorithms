@@ -1,1 +1,1 @@
-Algorithm NormalizedPathnames from Elements of Programming Interviews, for comparison purposes only
+Algorithm NQueens from Elements of Programming Interviews, for comparison purposes only
