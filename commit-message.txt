@@ -1,1 +1,1 @@
-Algorithm OddEven from Elements of Programming Interviews, for comparison purposes only
+Algorithm OfflineSampling from Elements of Programming Interviews, for comparison purposes only
