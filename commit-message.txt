@@ -1,1 +1,1 @@
-Algorithm OnlineMedian from Elements of Programming Interviews, for comparison purposes only
+Algorithm OnlineSampling from Elements of Programming Interviews, for comparison purposes only
