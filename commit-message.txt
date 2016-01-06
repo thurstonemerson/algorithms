@@ -1,1 +1,1 @@
-Algorithm OrderStatistic from Elements of Programming Interviews, for comparison purposes only
+Algorithm OrdinaryMazeGame from Elements of Programming Interviews, for comparison purposes only
