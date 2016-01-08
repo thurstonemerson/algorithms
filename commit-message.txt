@@ -1,1 +1,1 @@
-Algorithm OverlappingListsNoCycle from Elements of Programming Interviews, for comparison purposes only
+Algorithm PaintingIterative from Elements of Programming Interviews, for comparison purposes only
