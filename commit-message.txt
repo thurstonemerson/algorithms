@@ -1,1 +1,1 @@
-Algorithm PalindromeLinkedList from Elements of Programming Interviews, for comparison purposes only
+Algorithm PalindromeNumber from Elements of Programming Interviews, for comparison purposes only
