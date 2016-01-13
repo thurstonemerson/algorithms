@@ -1,1 +1,1 @@
-Algorithm PalindromePartitioning from Elements of Programming Interviews, for comparison purposes only
+Algorithm Parity1 from Elements of Programming Interviews, for comparison purposes only
