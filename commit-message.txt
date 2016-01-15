@@ -1,1 +1,1 @@
-Algorithm Parity3 from Elements of Programming Interviews, for comparison purposes only
+Algorithm Parity4 from Elements of Programming Interviews, for comparison purposes only
