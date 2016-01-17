@@ -1,1 +1,1 @@
-Algorithm PartitionArray from Elements of Programming Interviews, for comparison purposes only
+Algorithm PascalTriangle1 from Elements of Programming Interviews, for comparison purposes only
