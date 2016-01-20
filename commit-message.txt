@@ -1,1 +1,1 @@
-Algorithm PermutationArray2 from Elements of Programming Interviews, for comparison purposes only
+Algorithm Permutations from Elements of Programming Interviews, for comparison purposes only
