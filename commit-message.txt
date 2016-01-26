@@ -1,1 +1,1 @@
-Algorithm PickingUpCoins from Elements of Programming Interviews, for comparison purposes only
+Algorithm PlusOne from Elements of Programming Interviews, for comparison purposes only
