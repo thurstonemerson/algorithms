@@ -1,1 +1,1 @@
-Algorithm PowerSet from Elements of Programming Interviews, for comparison purposes only
+Algorithm PowerSetAlternative from Elements of Programming Interviews, for comparison purposes only
