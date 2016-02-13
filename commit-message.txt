@@ -1,1 +1,1 @@
-Algorithm QueueWithMaxAlternative from Elements of Programming Interviews, for comparison purposes only
+Algorithm RabinKarp from Elements of Programming Interviews, for comparison purposes only
