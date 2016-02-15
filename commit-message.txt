@@ -1,1 +1,1 @@
-Algorithm RebuildBSTPreorderBetter from Elements of Programming Interviews, for comparison purposes only
+Algorithm ReconstructBinaryTreePreInorders from Elements of Programming Interviews, for comparison purposes only
