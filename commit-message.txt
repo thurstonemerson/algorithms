@@ -1,1 +1,1 @@
-Algorithm RegularExpression from Elements of Programming Interviews, for comparison purposes only
+Algorithm RemoveDuplicatesFromSortedArray from Elements of Programming Interviews, for comparison purposes only
