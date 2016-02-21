@@ -1,1 +1,1 @@
-Algorithm RemoveDuplicatesSortedList from Elements of Programming Interviews, for comparison purposes only
+Algorithm RemoveKthLastList from Elements of Programming Interviews, for comparison purposes only
