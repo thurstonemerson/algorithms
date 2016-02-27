@@ -1,1 +1,1 @@
-Algorithm ReverseBits from Elements of Programming Interviews, for comparison purposes only
+Algorithm ReverseInteger from Elements of Programming Interviews, for comparison purposes only
