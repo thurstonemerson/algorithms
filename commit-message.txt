@@ -1,1 +1,1 @@
-Algorithm RookAttack from Elements of Programming Interviews, for comparison purposes only
+Algorithm RotateArray from Elements of Programming Interviews, for comparison purposes only
