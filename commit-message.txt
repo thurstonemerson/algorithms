@@ -1,1 +1,1 @@
-Algorithm RotateArray from Elements of Programming Interviews, for comparison purposes only
+Algorithm RotateArrayPermutation from Elements of Programming Interviews, for comparison purposes only
