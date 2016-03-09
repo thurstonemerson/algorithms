@@ -1,1 +1,1 @@
-Algorithm RunLengthCompression from Elements of Programming Interviews, for comparison purposes only
+Algorithm RW from Elements of Programming Interviews, for comparison purposes only
