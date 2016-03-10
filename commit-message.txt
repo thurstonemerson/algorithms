@@ -1,1 +1,1 @@
-Algorithm S1Alternative from Elements of Programming Interviews, for comparison purposes only
+Algorithm S2Alternative from Elements of Programming Interviews, for comparison purposes only
