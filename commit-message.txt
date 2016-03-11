@@ -1,1 +1,1 @@
-Algorithm SearchFrequentItems from Elements of Programming Interviews, for comparison purposes only
+Algorithm SearchMajority from Elements of Programming Interviews, for comparison purposes only
