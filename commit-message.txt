@@ -1,1 +1,1 @@
-Algorithm S2Alternative from Elements of Programming Interviews, for comparison purposes only
+Algorithm ScoreCombination from Elements of Programming Interviews, for comparison purposes only
