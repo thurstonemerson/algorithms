@@ -1,1 +1,1 @@
-Algorithm ShortestPathFewestEdges from Elements of Programming Interviews, for comparison purposes only
+Algorithm ShortestUniquePrefix from Elements of Programming Interviews, for comparison purposes only
