@@ -1,1 +1,1 @@
-Algorithm SlidingWindow from Elements of Programming Interviews, for comparison purposes only
+Algorithm SmallestSubarrayCoveringSet from Elements of Programming Interviews, for comparison purposes only
