@@ -1,1 +1,1 @@
-Algorithm SortedListToBST from Elements of Programming Interviews, for comparison purposes only
+Algorithm SortKIncreasingDecreasingArray from Elements of Programming Interviews, for comparison purposes only
