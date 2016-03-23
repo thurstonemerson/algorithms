@@ -1,1 +1,1 @@
-Algorithm SortKIncreasingDecreasingArray from Elements of Programming Interviews, for comparison purposes only
+Algorithm SortList from Elements of Programming Interviews, for comparison purposes only
