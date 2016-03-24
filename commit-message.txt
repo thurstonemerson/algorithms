@@ -1,1 +1,1 @@
-Algorithm SpiralMatrix from Elements of Programming Interviews, for comparison purposes only
+Algorithm SpiralMatrixClockwise from Elements of Programming Interviews, for comparison purposes only
