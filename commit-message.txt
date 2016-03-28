@@ -1,1 +1,1 @@
-Algorithm StackQueueUsingHeap from Elements of Programming Interviews, for comparison purposes only
+Algorithm StackWithMax from Elements of Programming Interviews, for comparison purposes only
