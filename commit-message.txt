@@ -1,1 +1,1 @@
-Algorithm StackWithMax from Elements of Programming Interviews, for comparison purposes only
+Algorithm StackWithMaxImproved from Elements of Programming Interviews, for comparison purposes only
