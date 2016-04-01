@@ -1,1 +1,1 @@
-Algorithm StackWithMaxImproved from Elements of Programming Interviews, for comparison purposes only
+Algorithm StaticInitializer from Elements of Programming Interviews, for comparison purposes only
