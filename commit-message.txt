@@ -1,1 +1,1 @@
-Algorithm StringConcatenation from Elements of Programming Interviews, for comparison purposes only
+Algorithm StringConcatenationStringBuilder from Elements of Programming Interviews, for comparison purposes only
