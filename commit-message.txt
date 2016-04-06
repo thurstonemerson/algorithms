@@ -1,1 +1,1 @@
-Algorithm Successor from Elements of Programming Interviews, for comparison purposes only
+Algorithm SudokuCheck from Elements of Programming Interviews, for comparison purposes only
