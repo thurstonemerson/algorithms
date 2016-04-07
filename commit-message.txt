@@ -1,1 +1,1 @@
-Algorithm SudokuCheck from Elements of Programming Interviews, for comparison purposes only
+Algorithm SudokuSolve from Elements of Programming Interviews, for comparison purposes only
