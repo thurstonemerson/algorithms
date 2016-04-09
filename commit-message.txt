@@ -1,1 +1,1 @@
-Algorithm SurroundedRegions from Elements of Programming Interviews, for comparison purposes only
+Algorithm SwapBits from Elements of Programming Interviews, for comparison purposes only
