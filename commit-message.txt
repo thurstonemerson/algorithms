@@ -1,1 +1,1 @@
-Algorithm TeamPhoto1 from Elements of Programming Interviews, for comparison purposes only
+Algorithm TeamPhoto2 from Elements of Programming Interviews, for comparison purposes only
