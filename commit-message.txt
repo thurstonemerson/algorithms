@@ -1,1 +1,1 @@
-Algorithm ThreeJugs from Elements of Programming Interviews, for comparison purposes only
+Algorithm ThreeSum from Elements of Programming Interviews, for comparison purposes only
