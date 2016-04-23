@@ -1,1 +1,1 @@
-Algorithm TreeDiameter from Elements of Programming Interviews, for comparison purposes only
+Algorithm Triangle from Elements of Programming Interviews, for comparison purposes only
