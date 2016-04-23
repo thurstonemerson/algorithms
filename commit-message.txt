@@ -1,1 +1,1 @@
-Algorithm TransformStringToOther from Elements of Programming Interviews, for comparison purposes only
+Algorithm TrappingRainWater from Elements of Programming Interviews, for comparison purposes only
