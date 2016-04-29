@@ -1,1 +1,1 @@
-Algorithm UniformRandomNumberGeneration from Elements of Programming Interviews, for comparison purposes only
+Algorithm UnionIntervals from Elements of Programming Interviews, for comparison purposes only
