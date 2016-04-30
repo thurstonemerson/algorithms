@@ -1,1 +1,1 @@
-Algorithm UnionIntervals from Elements of Programming Interviews, for comparison purposes only
+Algorithm UniqueBinaryTreesAll from Elements of Programming Interviews, for comparison purposes only
