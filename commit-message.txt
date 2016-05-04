@@ -1,1 +1,1 @@
-Algorithm ValidPalindrome from Elements of Programming Interviews, for comparison purposes only
+Algorithm ValidParentheses from Elements of Programming Interviews, for comparison purposes only
