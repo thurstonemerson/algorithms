@@ -1,1 +1,1 @@
-Algorithm WiringCircuitBoard from Elements of Programming Interviews, for comparison purposes only
+Algorithm WordBreaking from Elements of Programming Interviews, for comparison purposes only
