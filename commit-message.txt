@@ -1,1 +1,1 @@
-Question B of algorithm "Is Unique" from Cracking the Coding Interview, Chapter One: Arrays and Strings
+Testing function for algorithm "Is Unique" from Cracking the Coding Interview, Chapter One: Arrays and Strings
