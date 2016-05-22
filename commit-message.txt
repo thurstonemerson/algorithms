@@ -1,1 +1,0 @@
-Testing function for algorithm "Is Unique" from Cracking the Coding Interview, Chapter One: Arrays and Strings
