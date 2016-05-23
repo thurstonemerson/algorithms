@@ -52,16 +52,16 @@ public class FizzBuzz {
 	
 	 public static void main(String[] args) {	
 		 	//n is 2 prints 1, 2
-		 	assert("1, 2".equals(FizzBuzz.getFizzBuzz(2).trim()));
+		 	assert("1, 2".equals(FizzBuzz.getFizzBuzz(2)));
 		 	
 		 	//n is 3 prints 1, 2, fizz
-		 	assert("1, 2, fizz".equals(FizzBuzz.getFizzBuzz(3).trim()));
+		 	assert("1, 2, fizz".equals(FizzBuzz.getFizzBuzz(3)));
 		 	
 		 	//n is 5 prints 1, 2, fizz, 4, buzz
-		 	assert("1, 2, fizz, 4, buzz".equals(FizzBuzz.getFizzBuzz(5).trim()));
+		 	assert("1, 2, fizz, 4, buzz".equals(FizzBuzz.getFizzBuzz(5)));
 		 	
 		 	//n is 15 prints 1, 2, fizz, 4, buzz, fizz, 7, 8, fizz, buzz, 11, fizz, 13, 14, fizz buzz 
-		 	assert("1, 2, fizz, 4, buzz, fizz, 7, 8, fizz, buzz, 11, fizz, 13, 14, fizz buzz".equals(FizzBuzz.getFizzBuzz(15).trim()));
+		 	assert("1, 2, fizz, 4, buzz, fizz, 7, 8, fizz, buzz, 11, fizz, 13, 14, fizz buzz".equals(FizzBuzz.getFizzBuzz(15)));
 		}
 	
 }
