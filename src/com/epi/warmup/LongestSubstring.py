@@ -18,10 +18,42 @@ following constraints:
 @author: Jessica
 '''
 
-def find_longest_substring():
-    return ""
+#Strings: Write a program to find the longest substring that consists of a
+#single character in an input string.
+def find_longest_substring(input):
+    
+    longest_substring= ""
+    
+    for i in range(len(input)):
+        for j in range(i+1, len(input)+1):
+            substring = input[i:j]
+            if is_repeating_char(substring) and len(substring) >= len(longest_substring):
+                longest_substring = substring
+    
+    print "the longest substring is %s"%longest_substring
+    return longest_substring
 
-if __name__ == "main":
-    find_longest_substring()
+def is_repeating_char(str):
+    
+    first_char = str[:1]
+    
+    #if one of the characters doesn't equal the first one, chars are not repeated
+    for i in range(1, len(str)):
+        if first_char != str[i:i+1]:
+            return False
+    
+    return True
+
+
+if __name__ == "__main__":
+    
+    str = "a"
+    assert(find_longest_substring(str) == "a")
+     
+    str = "abbccc"
+    assert(find_longest_substring(str) == "ccc")
+    
+    str = "abbcccddd"
+    assert(find_longest_substring(str) == "ddd")
     
     
