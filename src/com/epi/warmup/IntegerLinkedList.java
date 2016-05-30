@@ -19,6 +19,8 @@
  */
 package com.epi.warmup;
 
+import java.util.NoSuchElementException;
+
 //Linked Lists: Implement a doubly linked list of integers class. 
 //Write a reverse method for your list class
 public class IntegerLinkedList {
@@ -34,7 +36,35 @@ public class IntegerLinkedList {
 	public boolean isEmpty() {
 		return (head == null);
 	}
-
+	
+	public void reverse(){
+		Node current = head;
+		
+		while (current != null){
+			//swap the previous and next pointers
+			Node tmp = current.next;
+			current.next = current.previous;
+			current.previous = tmp;
+			current = current.previous;
+		}
+		//swap the head and tail
+		Node tmp = head;
+		head = tail;
+		tail = tmp;
+	}
+	
+	public int getFirst(){
+		if (isEmpty())
+			throw new NoSuchElementException("List is empty"); 
+		return head.data;
+	}
+	
+	public int getLast(){
+		if (isEmpty())
+			throw new NoSuchElementException("List is empty"); 
+		return tail.data;
+	}
+	
 	public void addFirst(int data) {
 		Node newNode = new Node(data);
 		if (!isEmpty()) {
@@ -171,6 +201,8 @@ public class IntegerLinkedList {
 		list.addAfter(1, 2);
 		assert (list.printFromHead().equals("123"));
 		assert (list.printFromTail().equals("321"));
+		assert (list.getFirst() == 1);
+		assert (list.getLast() == 3);
 		
 		//check that returns false if key not found
 		assert (list.addAfter(6, 2) == false);
@@ -179,6 +211,15 @@ public class IntegerLinkedList {
 		list.addAfter(3, 4);
 		assert (list.printFromHead().equals("1234"));
 		assert (list.printFromTail().equals("4321"));
+		
+		//reverse the list
+		list.reverse();
+		assert (list.printFromTail().equals("1234"));
+		assert (list.printFromHead().equals("4321"));
+		
+		//check tail and head are correct
+		assert (list.getFirst() == 4);
+		assert (list.getLast() == 1);
 
 	}
 }
