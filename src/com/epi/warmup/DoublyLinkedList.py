@@ -34,13 +34,30 @@ class DoublyLinkedList:
             return True
         return False
     
-#     '''Reverse the list'''
-#     def reverse(self):
-#         
-#         current = self.head
-#         
-#         while current is not None:
+    '''Reverse the list'''
+    def reverse(self):
+         
+        current = self.head
+         
+        while current is not None:
+            old_next = current.next
+            current.next = current.previous
+            current.previous = old_next
+            current = old_next
             
+        old_head = self.head
+        self.head = self.tail
+        self.tail = old_head
+        
+    def get_head(self):
+        if self.is_empty():
+            raise ValueError("List is empty") 
+        return str(self.head.data)
+        
+    def get_tail(self):
+        if self.is_empty():
+            raise ValueError("List is empty") 
+        return str(self.tail.data)
               
     '''Add a node at the front of the linked list'''
     def add_first(self, data):
@@ -97,4 +114,13 @@ if __name__ == "__main__":
     
     assert(list.get_list_head_first() == "321")
     assert(list.get_list_tail_first() == "123")
+    assert(list.get_head() == "3")
+    assert(list.get_tail() == "1")
+    
+    list.reverse()
+    
+    assert(list.get_list_head_first() == "123")
+    assert(list.get_list_tail_first() == "321")
+    assert(list.get_head() == "1")
+    assert(list.get_tail() == "3")
     
