@@ -23,7 +23,72 @@ package com.epi.warmup;
 //Write a reverse method for your list class
 public class IntegerLinkedList {
 
+	private Node head;
+	private Node tail;
+
+	public IntegerLinkedList() {
+		head = null;
+		tail = null;
+	}
+
+	public boolean isEmpty() {
+		return (head == null);
+	}
+
+	public void addFirst(int data) {
+		Node newNode = new Node(data);
+		if (!isEmpty()) {
+			newNode.next = head;
+			head.previous = newNode;
+
+		}
+		head = newNode;
+	}
+
+	public void addLast(int data) {
+
+	}
+
+	public void addAfter(int data) {
+
+	}
+
+	public String toString() {
+		StringBuilder list = new StringBuilder("");
+		Node current = head;
+		while (current != null) {
+			list.append(current.data);
+			current = current.next;
+		}
+		System.out.println(list.toString());
+		return list.toString();
+	}
+
+	public class Node {
+		Node next = null;
+		Node previous = null;
+		int data;
+
+		public Node(int data) {
+			this.data = data;
+		}
+	}
+
 	public static void main(String args[]) {
 
+		//test add first
+		IntegerLinkedList list = new IntegerLinkedList();
+		list.addFirst(1);
+		
+		//check that can add one item at the beginning
+		assert(list.toString().equals("1"));
+		
+		list.addFirst(2);
+		list.addFirst(3);
+		
+		//check a list of items are inserted at the beginning
+		assert(list.toString().equals("321"));
+		
+		
 	}
 }
