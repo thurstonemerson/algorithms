@@ -23,12 +23,12 @@ import java.util.NoSuchElementException;
 
 //Linked Lists: Implement a doubly linked list of integers class. 
 //Write a reverse method for your list class
-public class IntegerLinkedList {
+public class DoublyLinkedList {
 
 	private Node head;
 	private Node tail;
 
-	public IntegerLinkedList() {
+	public DoublyLinkedList() {
 		head = null;
 		tail = null;
 	}
@@ -161,7 +161,7 @@ public class IntegerLinkedList {
 	public static void main(String args[]) {
 
 		// test add first
-		IntegerLinkedList list = new IntegerLinkedList();
+		DoublyLinkedList list = new DoublyLinkedList();
 		list.addFirst(1);
 
 		// check that can add one item at the beginning
@@ -176,7 +176,7 @@ public class IntegerLinkedList {
 		assert (list.printFromTail().equals("123"));
 
 		// test add last
-		list = new IntegerLinkedList();
+		list = new DoublyLinkedList();
 		list.addLast(1);
 
 		// check that can add one item at the end
@@ -191,7 +191,7 @@ public class IntegerLinkedList {
 		assert (list.printFromTail().equals("321"));
 		
 		//check can add an item in the middle
-		list = new IntegerLinkedList();
+		list = new DoublyLinkedList();
 		list.addFirst(1);
 		list.addLast(3);
 
