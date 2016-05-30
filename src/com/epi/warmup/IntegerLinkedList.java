@@ -40,7 +40,8 @@ public class IntegerLinkedList {
 		if (!isEmpty()) {
 			newNode.next = head;
 			head.previous = newNode;
-
+		} else {
+			tail = newNode;
 		}
 		head = newNode;
 	}
@@ -53,12 +54,23 @@ public class IntegerLinkedList {
 
 	}
 
-	public String toString() {
+	public String printFromHead() {
 		StringBuilder list = new StringBuilder("");
 		Node current = head;
 		while (current != null) {
 			list.append(current.data);
 			current = current.next;
+		}
+		System.out.println(list.toString());
+		return list.toString();
+	}
+	
+	public String printFromTail() {
+		StringBuilder list = new StringBuilder("");
+		Node current = tail;
+		while (current != null) {
+			list.append(current.data);
+			current = current.previous;
 		}
 		System.out.println(list.toString());
 		return list.toString();
@@ -81,13 +93,15 @@ public class IntegerLinkedList {
 		list.addFirst(1);
 		
 		//check that can add one item at the beginning
-		assert(list.toString().equals("1"));
+		assert(list.printFromHead().equals("1"));
+		assert(list.printFromTail().equals("1"));
 		
 		list.addFirst(2);
 		list.addFirst(3);
 		
 		//check a list of items are inserted at the beginning
-		assert(list.toString().equals("321"));
+		assert(list.printFromHead().equals("321"));
+		assert(list.printFromTail().equals("123"));
 		
 		
 	}
