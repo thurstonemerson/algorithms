@@ -47,7 +47,14 @@ public class IntegerLinkedList {
 	}
 
 	public void addLast(int data) {
-
+		Node newNode = new Node(data);
+		if (!isEmpty()) {
+			newNode.previous = tail;
+			tail.next = newNode;
+		} else {
+			head = newNode;
+		}
+		tail = newNode;
 	}
 
 	public void addAfter(int data) {
@@ -64,7 +71,7 @@ public class IntegerLinkedList {
 		System.out.println(list.toString());
 		return list.toString();
 	}
-	
+
 	public String printFromTail() {
 		StringBuilder list = new StringBuilder("");
 		Node current = tail;
@@ -88,21 +95,35 @@ public class IntegerLinkedList {
 
 	public static void main(String args[]) {
 
-		//test add first
+		// test add first
 		IntegerLinkedList list = new IntegerLinkedList();
 		list.addFirst(1);
-		
-		//check that can add one item at the beginning
-		assert(list.printFromHead().equals("1"));
-		assert(list.printFromTail().equals("1"));
-		
+
+		// check that can add one item at the beginning
+		assert (list.printFromHead().equals("1"));
+		assert (list.printFromTail().equals("1"));
+
 		list.addFirst(2);
 		list.addFirst(3);
+
+		// check a list of items are inserted at the beginning
+		assert (list.printFromHead().equals("321"));
+		assert (list.printFromTail().equals("123"));
+
+		// test add last
+		list = new IntegerLinkedList();
+		list.addLast(1);
+
+		// check that can add one item at the end
+		assert (list.printFromHead().equals("1"));
+		assert (list.printFromTail().equals("1"));
 		
-		//check a list of items are inserted at the beginning
-		assert(list.printFromHead().equals("321"));
-		assert(list.printFromTail().equals("123"));
-		
-		
+		list.addLast(2);
+		list.addLast(3);
+
+		// check a list of items are inserted at the beginning
+		assert (list.printFromHead().equals("123"));
+		assert (list.printFromTail().equals("321"));
+
 	}
 }
