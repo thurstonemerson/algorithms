@@ -50,9 +50,35 @@ class Stack:
             self.data = data
             self.next = None
     
-
+'''pass in an arithmetric expression string and evaluate it'''
 def evaluate_expression(expression):
-    return 0
+    
+    tokens = expression.split()
+    stack = Stack()
+    
+    for token in tokens:
+        if token in "0123456789":
+            stack.push(int(token))
+        else:
+            operand2=stack.pop()
+            operand1=stack.pop()
+            result = evaluate(operator=token, operand1=operand1, operand2=operand2)
+            stack.push(result)
+ 
+    result = stack.pop()
+    print result
+    return result
+
+def evaluate(operator, operand1, operand2):
+    if operator == "*":
+        return operand1 * operand2
+    if operator == "+":
+        return operand1 + operand2
+    if operator == "-":
+        return operand1 - operand2
+    if operator == "/":
+        return operand1 / operand2
+    
 
 if __name__ == "__main__":
     stack = Stack()
@@ -63,5 +89,8 @@ if __name__ == "__main__":
     assert(stack.pop() == 3)
     assert(stack.pop() == 2)
     assert(stack.pop() == 1)
+    
+    expression="6 2 4 * + 1 2 3 * + /"
+    assert(evaluate_expression(expression) == 2)
     
     
