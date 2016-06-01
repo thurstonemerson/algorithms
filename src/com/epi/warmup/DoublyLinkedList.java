@@ -37,6 +37,9 @@ public class DoublyLinkedList {
 		return (head == null);
 	}
 	
+	//reverse the linked list
+	//This has a time complexity of O(n) as we have to loop
+	//through the list swapping all the next/previous pointers
 	public void reverse(){
 		Node current = head;
 		
@@ -65,6 +68,8 @@ public class DoublyLinkedList {
 		return tail.data;
 	}
 	
+	//Add a data node to the top of the list
+	//This has a time complexity of O(1)
 	public void addFirst(int data) {
 		Node newNode = new Node(data);
 		if (!isEmpty()) {
@@ -76,6 +81,8 @@ public class DoublyLinkedList {
 		head = newNode;
 	}
 
+	//Add a data node to the end of the list
+	//This has a time complexity of O(1)
 	public void addLast(int data) {
 		Node newNode = new Node(data);
 		if (!isEmpty()) {
@@ -87,6 +94,9 @@ public class DoublyLinkedList {
 		tail = newNode;
 	}
 
+	//Add a data node to the top of the list
+	//This has a time complexity of O(n) as we have
+	//to loop through the list to find the key
 	public boolean addAfter(int key, int data) {
 
 		//find key
