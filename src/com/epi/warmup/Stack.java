@@ -1,6 +1,7 @@
 package com.epi.warmup;
 
 import java.util.EmptyStackException;
+import java.util.NoSuchElementException;
 
 public class Stack {
 	// Stacks and Queues: Write a program to evaluate arithmetical expressions
@@ -38,9 +39,67 @@ public class Stack {
 		top = top.next;
 		return data;
 	}
+	
+	//pass in a reverse polish notation string and evaluate it
+	public static int evaluateExpression(String expression){
+		
+		//4 2 5 * + / 3 2 * + /
+		Stack stack = new Stack();
+		
+		//parse expression into a list
+		String[] tokens = expression.split(" ");
+		
+		for (String token : tokens){
+			System.out.println("processing token " + token);
+			if (isOperator(token)){
+				int secondOperand = stack.pop();
+				int firstOperand = stack.pop();
+				stack.push(evaluate(token, firstOperand, secondOperand));
+			} else {
+				stack.push(Integer.valueOf(token));
+			}
+		}
+		
+		int result = stack.pop();
+		System.out.println("result is " + result);
+		return result;
+	}
+	
+	public static boolean isOperator(String token){
+		if (token.equals("*")|| token.equals("+")||token.equals("-")||token.equals("/")){
+			return true;
+		}
+		return false;
+	}
+	
+	
+	
+	public static int evaluate(String operator, int firstOperand, int secondOperand){
+		
+		if (operator.equals("*")){ 
+			return firstOperand * secondOperand;
+		}
+		
+		if (operator.equals("+")){ 
+			return firstOperand + secondOperand;
+		}
+		
+		if (operator.equals("-")){ 
+			return firstOperand - secondOperand;
+		}
+		
+		//what will happen if the answer is not an int?
+		if (operator.equals("/")){ 
+			return firstOperand / secondOperand;
+		}
+		
+		throw new NoSuchElementException("Token is not an operator");
+	}
+	
 
 	public static void main(String args[]) {
 
+		//test stack implementation
 		Stack stack = new Stack();
 		stack.push(3);
 		stack.push(2);
@@ -50,6 +109,9 @@ public class Stack {
 		assert(stack.pop() == 2);
 		assert(stack.pop() == 3);
 		assert(stack.isEmpty() == true);
+		
+		String expression = "4 2 5 * + 3 2 1 * + /";
+		assert(evaluateExpression(expression) == 2);
 		
 	}
 }
