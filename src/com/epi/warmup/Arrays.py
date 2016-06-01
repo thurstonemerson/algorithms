@@ -18,37 +18,23 @@ following constraints:
 @author: Jessica
 '''
 
+''' Arrays: Write a program that tests if a 2D square array is symmetric
+   about the diagonal from (0,0) to (n-1,n-1). '''
+def check_symmetric(array):
 
-'''   Primitive types: write a program that takes as input an integer, N, and prints
-all the integers from 1 to N, replacing numbers divisible by 3 with fizz, numbers divisible by
-5 with buzz, and numbers divisible by both with fizz buzz. '''
-def get_fizz_buzz(N):
-
-    fizz_buzz = []
+    for row in range(len(array)):
+        for col in range(len(array[row])):
+            if array[row][col] != array[col][row]:
+                return False
     
-    for x in range(1, N+1):
-        if x%3==0 and x%5==0:
-            fizz_buzz.append("fizz buzz")
-        elif x%3==0:
-            fizz_buzz.append("fizz")
-        elif x%5==0:
-            fizz_buzz.append("buzz")
-        else:
-            fizz_buzz.append(str(x))
-        
-        
-    fizz_str = ', '.join(fizz_buzz)   
-    print fizz_str 
-    return fizz_str
+    return True
     
 if __name__ == '__main__':
-    #2 = 1, 2
-   assert("1, 2" == get_fizz_buzz(2))
-   #3 = 1, 2, fizz
-   assert("1, 2, fizz" == get_fizz_buzz(3))
-   #5 = 1, 2, fizz, 4, buzz
-   assert("1, 2, fizz, 4, buzz" == get_fizz_buzz(5))
-   #15 = 1, 2, fizz, 4, buzz, fizz, 7, 8, fizz, buzz, 11, fizz, 13, 14, fizz buzz 
-   assert("1, 2, fizz, 4, buzz, fizz, 7, 8, fizz, buzz, 11, fizz, 13, 14, fizz buzz" == get_fizz_buzz(15))
    
+   symmetric_array = [[1, 2, 3, 4],[2, 1, 2, 3],[3, 2, 1, 2],[4, 3, 2, 1]]
+   non_symmetric_array = [[1, 2, 3, 5],[2, 1, 2, 3],[3, 2, 1, 2],[4, 3, 2, 1]]
+   
+   assert(check_symmetric(symmetric_array) == True)
+   assert(check_symmetric(non_symmetric_array) == False)
+  
    
