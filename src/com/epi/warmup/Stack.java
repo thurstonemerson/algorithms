@@ -6,7 +6,8 @@ import java.util.NoSuchElementException;
 public class Stack {
 	// Stacks and Queues: Write a program to evaluate arithmetical expressions
 	// that use + and applied to nonnegative integer arguments. Expressions are
-	// /in reverse-Polish notation, e.g., 3 4 + 5 , 1 3 + 5 7 + *.
+	// in reverse-Polish notation, e.g., 3 4 + 5 , 1 3 + 5 7 + *.
+	
 	private StackNode top = null;
 
 	public Stack() {
@@ -26,6 +27,7 @@ public class Stack {
 	}
 
 	// push a value onto the stack
+	// this has a big O time complexity of O(1)
 	public void push(int data) {
 		StackNode newNode = new StackNode(data);
 		newNode.next = top;
@@ -33,6 +35,7 @@ public class Stack {
 	}
 
 	// pop off the top of the stack
+	// this has a big O time complexity of O(1)
 	public int pop() {
 		if (isEmpty()) throw new EmptyStackException();
 		int data = top.data;
@@ -41,6 +44,10 @@ public class Stack {
 	}
 	
 	//pass in a reverse polish notation string and evaluate it
+	// This has a big O time complexity of O(n) where n is the number
+	// of operators/operands in the expression.
+	// Space complexity is O(n) as well, as there is around about one
+	// node for every item in the expression.
 	public static int evaluateExpression(String expression){
 		
 		//4 2 5 * + / 3 2 * + /

@@ -50,7 +50,7 @@ class Stack:
             self.data = data
             self.next = None
     
-'''pass in an arithmetric expression string and evaluate it'''
+'''pass an arithmetric expression string and evaluate it'''
 def evaluate_expression(expression):
     
     tokens = expression.split()
