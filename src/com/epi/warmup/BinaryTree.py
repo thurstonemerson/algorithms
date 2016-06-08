@@ -32,8 +32,13 @@ class BinaryTree:
     def __init__(self):
         self.root = None
 
-def inorder_traversal():
-    print "do it"
+'''In-order traversal is where the left branch is traversed first, then the node is visited, then the 
+right branch is traversed'''
+def inorder_traversal(node):
+    if node is not None:
+        inorder_traversal(node.left)
+        print node.data
+        inorder_traversal(node.right)
 
 if __name__ == "__main__":
     
@@ -44,6 +49,6 @@ if __name__ == "__main__":
     tree.root.left.left = Node(4)
     tree.root.left.right = Node(5)
     
-    inorder_traversal()
+    inorder_traversal(tree.root)
      
     
