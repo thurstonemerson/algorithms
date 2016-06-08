@@ -47,6 +47,14 @@ def preorder_traversal(node, nodes):
         nodes.append(node.data)
         preorder_traversal(node.left, nodes)
         preorder_traversal(node.right, nodes)
+        
+'''Post-order traversal is where the left branch is traversed, followed  by the right branch,
+finally the node is visited'''
+def postorder_traversal(node, nodes):
+    if node is not None:
+        postorder_traversal(node.left, nodes)
+        postorder_traversal(node.right, nodes)
+        nodes.append(node.data)
 
 if __name__ == "__main__":
     
@@ -68,6 +76,10 @@ if __name__ == "__main__":
     print nodes
     assert(nodes == [1, 2, 4, 5, 3])
     nodes = []
+    
+    postorder_traversal(tree.root, nodes)
+    print nodes
+    assert(nodes == [4, 5, 2, 3, 1])
      
      
     
