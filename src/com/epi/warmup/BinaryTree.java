@@ -16,7 +16,7 @@ public class BinaryTree {
 	public Node root = null;
 	public static StringBuilder nodes = new StringBuilder();
 	
-	//inorder traversal visits the left branch, visits the root, then the right branch
+	//inorder traversal visits the left branch, visits the node, then the right branch
 	public static void inorderTraversal(Node currentNode){
 		if (currentNode != null){
 			inorderTraversal(currentNode.left);
@@ -25,12 +25,13 @@ public class BinaryTree {
 		}
 	}
 	
+	//preorder traversal visits the node first, then the left branch followed by the right branch
 	public static void preorderTraversal(Node currentNode){
-//		if (currentNode != null){
-//			preorderTraversal(currentNode.left);
-//			nodes.append(currentNode.data);
-//			preorderTraversal(currentNode.right);
-//		}
+		if (currentNode != null){
+			nodes.append(currentNode.data);
+			preorderTraversal(currentNode.left);
+			preorderTraversal(currentNode.right);
+		}
 	}
 	
 	public static void postorderTraversal(Node currentNode){
@@ -59,9 +60,10 @@ public class BinaryTree {
 		assert(nodes.toString().equals("42513"));
 		nodes = new StringBuilder();
 		
-//		inorderTraversal(tree.root);
-//		assert(nodes.toString().equals("42513"));
-//		nodes = new StringBuilder();
+		preorderTraversal(tree.root);
+		System.out.println(nodes.toString());
+		assert(nodes.toString().equals("12453"));
+		nodes = new StringBuilder();
 
 //		
 //		inorderTraversal(tree.root);
