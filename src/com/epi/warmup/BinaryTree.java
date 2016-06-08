@@ -34,12 +34,13 @@ public class BinaryTree {
 		}
 	}
 	
+	//postorder traversal traverses the left branch followed by the right branch, then visits the node
 	public static void postorderTraversal(Node currentNode){
-//		if (currentNode != null){
-//			inorderTraversal(currentNode.left);
-//			nodes.append(currentNode.data);
-//			inorderTraversal(currentNode.right);
-//		}
+		if (currentNode != null){
+			postorderTraversal(currentNode.left);
+			postorderTraversal(currentNode.right);
+			nodes.append(currentNode.data);
+		}
 	}
 	
 	
@@ -65,11 +66,9 @@ public class BinaryTree {
 		assert(nodes.toString().equals("12453"));
 		nodes = new StringBuilder();
 
-//		
-//		inorderTraversal(tree.root);
-//		assert(nodes.toString().equals("42513"));
-//		nodes = new StringBuilder();
-
+		postorderTraversal(tree.root);
+		System.out.println(nodes.toString());
+		assert(nodes.toString().equals("45231"));
 	}
 }
 
