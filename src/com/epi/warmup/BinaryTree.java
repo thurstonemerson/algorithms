@@ -15,22 +15,30 @@ public class BinaryTree {
 	
 	public Node root = null;
 	
-	public void inorderTraversal(){
+	//inorder traversal visits the left branch, visits the root, then the right branch
+	public static String inorderTraversal(Node currentNode){
+		StringBuilder nodes = new StringBuilder();
+		if (currentNode != null){
+			inorderTraversal(currentNode.left);
+			nodes.append(currentNode.data);
+			inorderTraversal(currentNode.right);
+		}
+		System.out.println(nodes.toString());
+		return nodes.toString();
+	}
+	
+	public static void preorderTraversal(){
 		
 	}
 	
-	public void preorderTraversal(){
-		
-	}
-	
-	public void postorderTraversal(){
+	public static void postorderTraversal(){
 		
 	}
 	
 	
 //	Binary Trees: Write inorder, preorder and postorder traversal methods for a binary tree. (You will need
-//			to implement a class suitable for representing binary trees, but do not need to implement
-//			add, lookup, delete, etc. methods.)
+//	to implement a class suitable for representing binary trees, but do not need to implement
+//	add, lookup, delete, etc. methods.)
 	public static void main(String []args){
 		
 		BinaryTree tree = new BinaryTree();
@@ -40,6 +48,8 @@ public class BinaryTree {
 		tree.root.left.left = new Node(4);
 		tree.root.left.right = new Node(5);
 		
+		
+		assert(inorderTraversal(tree.root).equals("42513"));
 	}
 }
 
