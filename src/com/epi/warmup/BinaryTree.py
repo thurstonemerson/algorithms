@@ -39,6 +39,14 @@ def inorder_traversal(node, nodes):
         inorder_traversal(node.left, nodes)
         nodes.append(node.data)
         inorder_traversal(node.right, nodes)
+        
+'''Pre-order traversal is where the node is visited first, then the left branch is traversed, followed 
+by the right branch'''
+def preorder_traversal(node, nodes):
+    if node is not None:
+        nodes.append(node.data)
+        preorder_traversal(node.left, nodes)
+        preorder_traversal(node.right, nodes)
 
 if __name__ == "__main__":
     
@@ -52,7 +60,14 @@ if __name__ == "__main__":
     tree.root.left.right = Node(5)
     
     inorder_traversal(tree.root, nodes)
-    assert(nodes == [4, 2, 5, 1, 3])
     print nodes
+    assert(nodes == [4, 2, 5, 1, 3])
+    nodes = []
+    
+    preorder_traversal(tree.root, nodes)
+    print nodes
+    assert(nodes == [1, 2, 4, 5, 3])
+    nodes = []
+     
      
     
