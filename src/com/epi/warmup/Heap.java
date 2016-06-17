@@ -19,6 +19,41 @@ package com.epi.warmup;
  * @author Jessica
  * 
  */
+
+//Heaps: Write a program that builds a max-heap from an integer array. (You will need to implement
+//a class suitable for representing heaps, but do not need to implement extract-max, insert key, etc.)
 public class Heap {
+	
+	public int max_heap[] = null;
+	
+	public Heap(int a[]){
+		max_heap = a;
+	}
+	
+	public void heapify(int a[], int i){
+		
+		int left_index = 2*i;
+		int right_index = (2*1)+1;
+		int max = i;
+		
+		if (left_index < a.length && a[left_index] > a[i]){
+			max = i;
+		}
+		if (right_index < a.length && a[right_index] > a[i]){
+			max = i;
+		}
+		if (max != i){
+			//swap the max with the index
+			int swap = a[i];
+			a[i] = a[max];
+			a[max] = swap;
+			heapify(a, max);
+		}
+		
+	}
+	
+	public static void main(String args[]){
+		int a[] = new int[]{};
+	}
 
 }
