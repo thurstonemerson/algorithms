@@ -28,32 +28,47 @@ public class Heap {
 	
 	public Heap(int a[]){
 		max_heap = a;
+		
+		for (int x=1; x < max_heap.length; x++){
+			heapify(x);
+		}
 	}
 	
-	public void heapify(int a[], int i){
+	public void heapify(int i){
+		
+		System.out.println("calling heapify with index " + i);
 		
 		int left_index = 2*i;
 		int right_index = (2*1)+1;
 		int max = i;
 		
-		if (left_index < a.length && a[left_index] > a[i]){
-			max = i;
+		if (left_index < max_heap.length && max_heap[left_index] > max_heap[i]){
+			max = left_index;
 		}
-		if (right_index < a.length && a[right_index] > a[i]){
-			max = i;
+		if (right_index < max_heap.length && max_heap[right_index] > max_heap[i]){
+			max = right_index;
 		}
 		if (max != i){
 			//swap the max with the index
-			int swap = a[i];
-			a[i] = a[max];
-			a[max] = swap;
-			heapify(a, max);
+			int swap = max_heap[i];
+			max_heap[i] = max_heap[max];
+			max_heap[max] = swap;
+			heapify(max);
 		}
 		
 	}
 	
+	public void display(){
+		for (int x=0; x < max_heap.length; x++){
+			System.out.println(max_heap[x]);
+		}
+	}
+	
 	public static void main(String args[]){
-		int a[] = new int[]{};
+		int a[] = new int[]{0, 2, 5, 10, 15, 19, 20, 30, 50};
+		
+		Heap heap = new Heap(a);
+		heap.display();
 	}
 
 }
