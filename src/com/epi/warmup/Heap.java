@@ -29,18 +29,18 @@ public class Heap {
 	public Heap(int a[]){
 		max_heap = a;
 		
-		for (int x=1; x < max_heap.length; x++){
+		for (int x=max_heap.length; x > 0; x--){
 			heapify(x);
 		}
 	}
 	
 	public void heapify(int i){
 		
-		System.out.println("calling heapify with index " + i);
-		
 		int left_index = 2*i;
-		int right_index = (2*1)+1;
+		int right_index = left_index+1;
 		int max = i;
+		
+		System.out.println("calling heapify with index " + i + " left_index "  + left_index + " right_index " + right_index);
 		
 		if (left_index < max_heap.length && max_heap[left_index] > max_heap[i]){
 			max = left_index;
@@ -48,6 +48,8 @@ public class Heap {
 		if (right_index < max_heap.length && max_heap[right_index] > max_heap[i]){
 			max = right_index;
 		}
+		
+		System.out.println("max " + max + " and i " + i);
 		if (max != i){
 			//swap the max with the index
 			int swap = max_heap[i];
