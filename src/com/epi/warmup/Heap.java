@@ -29,23 +29,26 @@ public class Heap {
 	public Heap(int a[]){
 		max_heap = a;
 		
-		for (int x=max_heap.length; x > 0; x--){
+		//only loop through nodes that are not leaves (every node that is greater than n/2
+		//will be a leaf)
+		for (int x=(max_heap.length/2)-1; x >= 0; x--){
 			heapify(x);
 		}
 	}
 	
 	public void heapify(int i){
 		
-		int left_index = 2*i;
+		int left_index = (2*i)+1;
 		int right_index = left_index+1;
 		int max = i;
-		
-		System.out.println("calling heapify with index " + i + " left_index "  + left_index + " right_index " + right_index);
-		
-		if (left_index < max_heap.length && max_heap[left_index] > max_heap[i]){
+			
+		//if the left index is larger than the root
+		if (left_index < max_heap.length && max_heap[left_index] > max_heap[max]){
 			max = left_index;
 		}
-		if (right_index < max_heap.length && max_heap[right_index] > max_heap[i]){
+		
+		//if the right index is larger than the maximum
+		if (right_index < max_heap.length && max_heap[right_index] > max_heap[max]){
 			max = right_index;
 		}
 		
@@ -67,7 +70,7 @@ public class Heap {
 	}
 	
 	public static void main(String args[]){
-		int a[] = new int[]{0, 2, 5, 10, 15, 19, 20, 30, 50};
+		int a[] = new int[]{2, 5, 10, 15, 19, 20, 30, 50};
 		
 		Heap heap = new Heap(a);
 		heap.display();
