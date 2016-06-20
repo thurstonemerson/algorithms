@@ -19,7 +19,13 @@ package com.epi.warmup;
  * @author Jessica
  * 
  */
+
+//Searching: Write a nonrecursive program to perform binary search over a sorted array.
 public class BinarySearch {
 	
+	
+	public static void main(String []args){
+		
+	}
 
 }
