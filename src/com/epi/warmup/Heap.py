@@ -36,8 +36,18 @@ class Heap:
         right_index = left_index+1
         max = i
         
-        #if (i < len(self.max_heap) and self.max_heap[max] > self.max_heap[max]):
-
+        if (left_index < len(self.max_heap) and self.max_heap[left_index] > self.max_heap[max]):
+            max = left_index
+            
+        if (right_index < len(self.max_heap) and self.max_heap[right_index] > self.max_heap[max]):
+            max = right_index
+            
+        if max != i:
+            swap = self.max_heap[i]
+            self.max_heap[i] = self.max_heap[max]
+            self.max_heap[max] = swap
+            self.heapify(max)
+        
     def display(self):
         for i in range(len(self.max_heap)):
             print self.max_heap[i]
