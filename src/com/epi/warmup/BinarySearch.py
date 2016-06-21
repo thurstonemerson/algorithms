@@ -24,12 +24,29 @@ def search(a, key):
     left = 0
     right = len(a)-1
     
-    #while (left <= right):
+    while (left <= right):
+        mid = left + (right - left)/2
+        
+        if (a[mid] == key):
+            print ("found key {0} at index {1}".format(a[mid], mid))
+            return mid
+        
+        if (a[mid] > key):
+            right = mid - 1
+        else:
+            left = mid + 1
     
+    print ("Didn't find key {0}".format(key))
     return -1
 
 if __name__ == "__main__":
+    a = []
+    
+    assert(search(a, 4) == -1)
+    
     a = [0, 1, 4, 5, 8, 10]
     
-    search(a, 4)
+    assert(search(a, 4) == 2)
+    assert(search(a, 10) == 5)
+    assert(search(a, 7) == -1)
     
