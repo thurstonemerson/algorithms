@@ -40,10 +40,30 @@ public class HashTable {
 			this.str2 = str2;
 		}
 		
+		@Override
+		public int hashCode(){
+			int hashcode = 1;
+			
+			if (this.str1 != null){
+				hashcode += this.str1.hashCode();
+			}
+			if (this.str2 != null){
+				hashcode += this.str2.hashCode();
+			}
+			
+			return hashcode;
+		}
+		
 		//return true if both the string objects are not null, and equal each other (ignoring case)
-		public boolean equals(ArrayObject obj){
-			if (obj != null && obj.str1 != null && this.str1 != null && obj.str1.equalsIgnoreCase(this.str1)){
-				if (obj.str2 != null && this.str2 != null && obj.str2.equalsIgnoreCase(this.str2)){
+		@Override
+		public boolean equals(Object obj){
+			if (!(obj instanceof ArrayObject)){
+				return false;
+			}
+			
+			ArrayObject compareObj = (ArrayObject) obj;
+			if (obj != null && compareObj.str1 != null && this.str1 != null && compareObj.str1.equalsIgnoreCase(this.str1)){
+				if (compareObj.str2 != null && this.str2 != null && compareObj.str2.equalsIgnoreCase(this.str2)){
 					return true;
 				}
 			}
@@ -82,8 +102,9 @@ public class HashTable {
 		ArrayObject obj4 = new HashTable.ArrayObject("ff", "asdf");
 		ArrayObject obj5 = new HashTable.ArrayObject("ff", "asdf");
 		ArrayObject obj6 = new HashTable.ArrayObject(null, null);
+		ArrayObject obj7 = new HashTable.ArrayObject("hello", "ick");
 
-		ArrayObject[] a = new ArrayObject[]{obj1, obj2, obj3, obj4, obj5, obj6};
+		ArrayObject[] a = new ArrayObject[]{obj1, obj2, obj3, obj4, obj5, obj6, obj7};
 		findMostCommonObjects(a);
 		
 	}
