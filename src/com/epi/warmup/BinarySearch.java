@@ -24,6 +24,32 @@ package com.epi.warmup;
 public class BinarySearch {
 	
 	
+	public static int search(int []a, int key){
+		
+		assert (a.length > 0);
+		
+		int left = 0;
+		int right = a.length - 1;
+		int mid = 0;
+		
+		while (left <= right){
+			
+			mid = left + (right-left)/2;
+			
+			if (a[mid] == key){
+				return mid;
+			}
+			
+			if (a[mid] > key){
+				right = mid - 1;
+			} else {
+				left = mid + 1;
+			}
+		}
+		
+	}
+	
+	
 	public static void main(String []args){
 		
 	}
