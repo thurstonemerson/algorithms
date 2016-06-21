@@ -26,8 +26,6 @@ public class BinarySearch {
 	
 	public static int search(int []a, int key){
 		
-		assert (a.length > 0);
-		
 		int left = 0;
 		int right = a.length - 1;
 		int mid = 0;
@@ -37,6 +35,7 @@ public class BinarySearch {
 			mid = left + (right-left)/2;
 			
 			if (a[mid] == key){
+				System.out.println("Found " +a[mid] + " at index " + mid);
 				return mid;
 			}
 			
@@ -47,11 +46,25 @@ public class BinarySearch {
 			}
 		}
 		
+		System.out.println(key +  " not found");
+		return -1;
 	}
 	
 	
 	public static void main(String []args){
 		
+		int []a = new int[]{};
+		
+		assert(search(a, 2) == -1);
+		
+		a = new int[]{0, 1, 4, 5, 8, 10};
+		
+		assert(search(a, 4) == 2);
+		
+		assert(search(a, 10) == 5);
+		
+		assert(search(a, 15) == -1);
+			
 	}
 
 }
