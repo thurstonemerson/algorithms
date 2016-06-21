@@ -32,6 +32,8 @@ public class BinarySearch {
 		
 		while (left <= right){
 			
+			//use of l + (r-l)/2 reorders equation to prevent overflow
+			//which may occur when using (l + r)/2
 			mid = left + (right-left)/2;
 			
 			if (a[mid] == key){
