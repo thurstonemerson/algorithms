@@ -1,4 +1,4 @@
-package com.careercup.Q1_02_Check_Permutation;
+package com.careercup.Q1_04_Palindrome_Permutation;
 
 public class QuestionC {
 	/* Toggle the ith bit in the integer. */
