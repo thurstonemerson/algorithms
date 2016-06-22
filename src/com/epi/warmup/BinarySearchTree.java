@@ -12,8 +12,12 @@ public class BinarySearchTree {
 	}
 	
 	public static Node search(Node currentNode, int key){
-		if (currentNode == null || currentNode.data == key)
+		if (currentNode == null || currentNode.data == key){
+			if (currentNode != null){
+				System.out.println("Found node " + currentNode.data);
+			}
 			return currentNode;
+		}
 		
 		//search either the left branch or the right branch
 		if (currentNode.data < key){
@@ -44,6 +48,8 @@ public class BinarySearchTree {
 		root.right.right = new BinarySearchTree.Node(14);
 		
 		assert(search(root, 1).equals(root.left.left));
+		assert(!search(root, 1).equals(root.left.right));
+		assert(search(root, 10).equals(root.right));
 		
 	}
 	
