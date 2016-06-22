@@ -57,18 +57,29 @@ public class HashTable {
 		//return true if both the string objects are not null, and equal each other (ignoring case)
 		@Override
 		public boolean equals(Object obj){
-			if (!(obj instanceof ArrayObject)){
+			if (!(obj instanceof ArrayObject) || obj == null){
 				return false;
 			}
 			
 			ArrayObject compareObj = (ArrayObject) obj;
-			if (obj != null && compareObj.str1 != null && this.str1 != null && compareObj.str1.equalsIgnoreCase(this.str1)){
-				if (compareObj.str2 != null && this.str2 != null && compareObj.str2.equalsIgnoreCase(this.str2)){
-					return true;
-				}
+			
+			boolean str1Equal = false, str2Equal = false;
+			
+			if (compareObj.str1 == null && this.str1 == null)
+				str1Equal = true;
+			
+			if (compareObj.str2 == null && this.str2 == null)
+				str2Equal = true;
+				
+			if (compareObj.str1 != null && this.str1 != null && compareObj.str1.equalsIgnoreCase(this.str1)){
+				str1Equal = true;
 			}
 			
-			return false;
+			if (compareObj.str2 != null && this.str2 != null && compareObj.str2.equalsIgnoreCase(this.str2)){
+				str2Equal = true;
+			}
+			
+			return str1Equal && str2Equal;
 		}
 	}
 	
@@ -76,6 +87,7 @@ public class HashTable {
 		
 		Hashtable<ArrayObject, Integer> objectCount = new Hashtable<ArrayObject, Integer>();
 		
+		//loop through the array and add one to the count for each object
 		for (ArrayObject obj : a){
 			Integer count = objectCount.get(obj);
 			if (count != null){
@@ -83,12 +95,19 @@ public class HashTable {
 			} else {
 				count = 1;
 			}
+			System.out.println(count);
 			objectCount.put(obj, count);
 		}
 		
+		int max = 0;
 		
+		//find the object with maximum count
 		for (ArrayObject obj : objectCount.keySet()){
-			System.out.println("For object " + obj.str1 + " " + obj.str2 + " the count is " + objectCount.get(obj) );
+			Integer count = objectCount.get(obj);
+			System.out.println("For object " + obj.str1 + " " + obj.str2 + " the count is " + count);
+//			if (count ){
+//				
+//			}
 		}
 		
 	}
