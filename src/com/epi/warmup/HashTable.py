@@ -32,10 +32,10 @@ class ArrayObject:
         return hash((self.str1, self.str2))
     
     def __eq__(self, other):
-        if not isinstance(ArrayObject, other) or other is None:
+        if not isinstance(other, ArrayObject) or other is None:
              return False
          
-        str1Match, str2Match = False 
+        str1Match, str2Match = False, False 
          
         if other.str1 is None and self.str1 is None:
             str1Match = True
@@ -49,7 +49,7 @@ class ArrayObject:
         if other.str2 is not None and self.str2 is not None and other.str2 == self.str2:
             str2Match = True
         
-        return str1Match and strMatch
+        return str1Match and str2Match
         
     def __ne__(self, other):
         if not isinstance(ArrayObject, other) or other is None:
@@ -69,13 +69,28 @@ class ArrayObject:
         if other.str2 is not None and self.str2 is not None and other.str2 == self.str2:
             str2NotMatch = False
         
-        return str1Match or strMatch
+        return str1NotMatch or str2NotMatch
     
     
 def mostcommonobject(a):
     
+    dict = {}
+    
     for obj in a:
         print ("{0}, {1}".format(obj.str1, obj.str2))
+        count = dict.get(obj)
+        
+        if count is None:
+            count = 1
+        else:
+            count = count + 1
+            
+        dict[obj] = count
+        
+    for key in dict:
+        print ("object {0}{1} has count {2} ".format(key.str1, key.str2, dict[key]))
+        
+    
       
         
 
