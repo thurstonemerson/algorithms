@@ -1,9 +1,6 @@
 package com.epi.warmup;
 
-import java.util.Enumeration;
 import java.util.Hashtable;
-
-import com.epi.warmup.HashTable.ArrayObject;
 
 /**
  * The programming exercises in EPI are representative of what you will be asked
