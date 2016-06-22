@@ -18,4 +18,77 @@ following constraints:
 @author: Jessica
 '''
 
-'''  '''
+'''Hash tables: Write a program that finds the most common object in an
+array of objects. The objects consists of pairs of strings. Treat strings as being the same if
+they are equal when converted to lower case.  '''
+
+class ArrayObject:
+    
+    def __init__(self, str1, str2):
+        self.str1 = str1
+        self.str2 = str2
+        
+    def __hash__(self):
+        return hash((self.str1, self.str2))
+    
+    def __eq__(self, other):
+        if not isinstance(ArrayObject, other) or other is None:
+             return False
+         
+        str1Match, str2Match = False 
+         
+        if other.str1 is None and self.str1 is None:
+            str1Match = True
+        
+        if other.str2 is None and self.str2 is None:
+            str2Match = True
+            
+        if other.str1 is not None and self.str1 is not None and other.str1 == self.str1:
+            str1Match = True
+            
+        if other.str2 is not None and self.str2 is not None and other.str2 == self.str2:
+            str2Match = True
+        
+        return str1Match and strMatch
+        
+    def __ne__(self, other):
+        if not isinstance(ArrayObject, other) or other is None:
+             return False
+         
+        str1NotMatch, str2NotMatch = True 
+         
+        if other.str1 is None and self.str1 is None:
+            str1NotMatch = False
+        
+        if other.str2 is None and self.str2 is None:
+            str2NotMatch = False
+            
+        if other.str1 is not None and self.str1 is not None and other.str1 == self.str1:
+            str1NotMatch = False
+            
+        if other.str2 is not None and self.str2 is not None and other.str2 == self.str2:
+            str2NotMatch = False
+        
+        return str1Match or strMatch
+    
+    
+def mostcommonobject(a):
+    
+    for obj in a:
+        print ("{0}, {1}".format(obj.str1, obj.str2))
+      
+        
+
+if __name__ == "__main__":
+    
+    obj1 = ArrayObject("hello", "ick");
+    obj2 = ArrayObject("hello", "ick");
+    obj3 = ArrayObject("", "ick");
+    obj4 = ArrayObject("ff", "asdf");
+    obj5 = ArrayObject("ff", "asdf");
+    obj6 = ArrayObject(None, None);
+    obj7 = ArrayObject("hello", "ick");
+    
+    a = [obj1, obj2, obj3, obj4, obj5, obj6, obj7]
+    mostcommonobject(a)
+
