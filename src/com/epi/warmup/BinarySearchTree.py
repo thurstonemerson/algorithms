@@ -35,13 +35,15 @@ class BinarySearchTree:
     def search(self, current_node, key):
         #case where key is found or current node is null (no key found in tree)
         if current_node is None or current_node.data == key:
+            if current_node is not None:
+                print "Found node with data {0}".format(current_node.data)
             return current_node 
         
         #search further in the left or right branches
         if current_node.data < key:
-            return search(current_node.right, key)
+            return self.search(current_node.right, key)
         else:
-            return search(current_node.left, key)
+            return self.search(current_node.left, key)
         
         
 if __name__ == "__main__":
@@ -49,9 +51,13 @@ if __name__ == "__main__":
     tree.root = Node(8)
     tree.root.left = Node(3)
     tree.root.right = Node(10)
-    tree.root.left.right = Node(8)
-    tree.root.left.left = Node(8)
-    tree.root.right.right    = Node(8)     
+    tree.root.left.right = Node(6)
+    tree.root.left.left = Node(1)
+    tree.root.right.right = Node(14) 
+    
+    assert(tree.search(tree.root, 10) == tree.root.right)
+    assert(tree.search(tree.root, 10) != tree.root.left)
+    assert(tree.search(tree.root, 14) == tree.root.right.right)
 
 
 
