@@ -39,17 +39,18 @@ public class BinarySearchTree {
 	}
 	
 	public static void main(String args[]){
+	
+		BinarySearchTree tree = new BinarySearchTree(new BinarySearchTree.Node(8));
 		
-		Node root = new BinarySearchTree.Node(8);
-		root.left = new BinarySearchTree.Node(3);
-		root.right = new BinarySearchTree.Node(10);
-		root.left.left = new BinarySearchTree.Node(1);
-		root.left.right = new BinarySearchTree.Node(6);
-		root.right.right = new BinarySearchTree.Node(14);
+		tree.root.left = new BinarySearchTree.Node(3);
+		tree.root.right = new BinarySearchTree.Node(10);
+		tree.root.left.left = new BinarySearchTree.Node(1);
+		tree.root.left.right = new BinarySearchTree.Node(6);
+		tree.root.right.right = new BinarySearchTree.Node(14);
 		
-		assert(search(root, 1).equals(root.left.left));
-		assert(!search(root, 1).equals(root.left.right));
-		assert(search(root, 10).equals(root.right));
+		assert(search(tree.root, 1).equals(tree.root.left.left));
+		assert(!search(tree.root, 1).equals(tree.root.left.right));
+		assert(search(tree.root, 10).equals(tree.root.right));
 		
 	}
 	
