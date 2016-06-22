@@ -83,7 +83,7 @@ public class HashTable {
 		}
 	}
 	
-	public static void findMostCommonObjects(ArrayObject[] a){
+	public static ArrayObject findMostCommonObject(ArrayObject[] a){
 		
 		Hashtable<ArrayObject, Integer> objectCount = new Hashtable<ArrayObject, Integer>();
 		
@@ -100,16 +100,19 @@ public class HashTable {
 		}
 		
 		int max = 0;
+		ArrayObject maxObj = null;
 		
 		//find the object with maximum count
 		for (ArrayObject obj : objectCount.keySet()){
-			Integer count = objectCount.get(obj);
+			int count = objectCount.get(obj);
 			System.out.println("For object " + obj.str1 + " " + obj.str2 + " the count is " + count);
-//			if (count ){
-//				
-//			}
+			if (count > max){
+				max = count;
+				maxObj = obj;
+			}
 		}
 		
+		return maxObj;
 	}
 	
 
@@ -124,8 +127,9 @@ public class HashTable {
 		ArrayObject obj7 = new HashTable.ArrayObject("hello", "ick");
 
 		ArrayObject[] a = new ArrayObject[]{obj1, obj2, obj3, obj4, obj5, obj6, obj7};
-		findMostCommonObjects(a);
+		ArrayObject obj = findMostCommonObject(a);
 		
+		System.out.println("The maximum object is " + obj.str1 + " " + obj.str2);
 	}
 
 }
