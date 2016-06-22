@@ -44,8 +44,15 @@ class BinarySearchTree:
             return search(current_node.left, key)
         
         
-        
-        
+if __name__ == "__main__":
+    tree = BinarySearchTree()
+    tree.root = Node(8)
+    tree.root.left = Node(3)
+    tree.root.right = Node(10)
+    tree.root.left.right = Node(8)
+    tree.root.left.left = Node(8)
+    tree.root.right.right    = Node(8)     
+
 
 
     
