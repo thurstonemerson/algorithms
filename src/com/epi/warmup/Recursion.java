@@ -44,6 +44,7 @@ public class Recursion {
 		//if odd multiple the total together (plus once extra to offset what was 
 		//lost in the division cast to an integer)
 		//e.g. x^7 = x^3 * x^3 * x
+		System.out.println(x + "^" + n + "=" + (total * total * x));
 		return total * total * x;
 	}
 
