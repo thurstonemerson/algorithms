@@ -30,17 +30,21 @@ public class Recursion {
 			System.out.println(x + "^" + n + "=1");
 			return 1;
 		}
+		
+		//recursively compute power of n/2
+		int total = power(x, n / 2);
 
-		//if even, recursively compute power of n/2 until we are able to multiply
-		//the total together
+		//if even multiply the total together because x^n/2 * x^n/2 = x^n
+		//eg x^6 = x^3 * x^3 
 		if (n % 2 == 0) {
-			int total = power(x, n / 2);
 			System.out.println(x + "^" + n + "=" + (total * total));
 			return total * total;
 		}
 		
-		//if odd, subtract one from n to make it even and recursively call power function
-		return power(x, n-1) * x;
+		//if odd multiple the total together (plus once extra to offset what was 
+		//lost in the division cast to an integer)
+		//e.g. x^7 = x^3 * x^3 * x
+		return total * total * x;
 	}
 
 	public static void main(String args[]) {
