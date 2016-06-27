@@ -25,14 +25,17 @@ public class Recursion {
 	// and returns x to the power N.
 	// You should use O(log N) multiplications.
 
-	public int power(int x, int n) {
-		if (n == 0)
+	public static int power(int x, int n) {
+		if (n == 0){
+			System.out.println(x + "^" + n + "=1");
 			return 1;
+		}
 
 		//if even, recursively compute power of n/2 until we are able to multiply
 		//the total together
 		if (n % 2 == 0) {
 			int total = power(x, n / 2);
+			System.out.println(x + "^" + n + "=" + (total * total));
 			return total * total;
 		}
 		
@@ -40,8 +43,10 @@ public class Recursion {
 		return power(x, n-1) * x;
 	}
 
-	public void main(String args[]) {
-
+	public static void main(String args[]) {
+		
+		assert(power(2, 8) == 256);
+		assert(power(2, 7) == 128);
 	}
 
 }
