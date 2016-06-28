@@ -36,5 +36,3 @@ if __name__ == '__main__':
    
    assert(check_symmetric(symmetric_array) == True)
    assert(check_symmetric(non_symmetric_array) == False)
-  
-   
