@@ -24,8 +24,20 @@ following constraints:
 
 
 def get_number_of_strings(n):
-    return 0
-
+    p0, p1, s0, s1 = 1, 1, 1, 1
+    
+    for x in range(2, n+1):
+        s0 = p0 + p1
+        s1 = p0
+        p0 = s0
+        p1 = s1
+        
+    return s0 + s1    
+    
 if __name__ == "__main__":
-    get_number_of_strings(3)
+    assert(get_number_of_strings(1) == 2)
+    assert(get_number_of_strings(3) == 5)
+    assert(get_number_of_strings(4) == 8)
+    
+    
     
