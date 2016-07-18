@@ -58,6 +58,11 @@ public class GreedyAlgorithm {
 	
 	public static void main(String args[]){
 		
+		assert(minNoOfCoins_greedy(37) == 4);
+		assert(minNoOfCoins_greedy(75) == 2);
+		assert(minNoOfCoins_greedy(10) == 1);
+		assert(minNoOfCoins_greedy(30) == 2);
+		
 		
 		
 	}
