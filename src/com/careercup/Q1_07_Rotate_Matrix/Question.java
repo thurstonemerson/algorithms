@@ -1,6 +1,6 @@
 package com.careercup.Q1_07_Rotate_Matrix;
 
-import CtCILibrary.*;
+import com.careercup.CtCILibrary.*;
 
 public class Question {
 

@@ -1,6 +1,6 @@
 package com.careercup.Q1_08_Zero_Matrix;
 
-import CtCILibrary.AssortedMethods;
+import com.careercup.CtCILibrary.AssortedMethods;
 
 public class Tester {
 	public static boolean matricesAreEqual(int[][] m1, int[][] m2) {
