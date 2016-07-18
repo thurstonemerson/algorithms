@@ -1,7 +1,7 @@
 package com.careercup.Q2_01_Remove_Dups;
 
 import java.util.HashSet;
-import CtCILibrary.LinkedListNode;
+import com.careercup.CtCILibrary.LinkedListNode;
 
 public class QuestionA {
 	public static void deleteDups(LinkedListNode n) {

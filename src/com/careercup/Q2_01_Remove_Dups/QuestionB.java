@@ -1,6 +1,6 @@
 package com.careercup.Q2_01_Remove_Dups;
 
-import CtCILibrary.LinkedListNode;
+import com.careercup.CtCILibrary.LinkedListNode;
 
 public class QuestionB {
 	public static void deleteDups(LinkedListNode head) {
