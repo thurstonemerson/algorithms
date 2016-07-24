@@ -1,6 +1,6 @@
-package Q2_02_Return_Kth_To_Last;
+package com.careercup.Q2_02_Return_Kth_To_Last;
 
-import CtCILibrary.*;
+import com.careercup.CtCILibrary.*;
 
 public class QuestionC {
 	public static class Index {
