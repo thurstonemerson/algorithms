@@ -66,12 +66,24 @@ public class GreedyAlgorithm {
 	//with coins i to n.
 	//                      j
 	//          0 1 2 3 4 5 6 7 8 9 10 11 12
-	//   1(10)  0 1 2 3 4 5 1 2 3 4  1  2  2
+	//   1 (1)  0 1 2 3 4 5 6 7 8 9 10 11 12
 	// i 2 (6)  0 1 2 3 4 5 1 2 3 4  5  6  2
-	//   3 (1)  0 1 2 3 4 5 6 7 8 9 10 11 12
+	//   3(10)  0 1 2 3 4 5 1 2 3 4  1  2  2
 	
-	//For example C[3][12] gives us the minimum number of coins for j=12 using only coin {1}.
-	// C[1][12] gives us the minimum number of coins for j=12 using coins {1, 6, 10}
+	//For example C[1][12] gives us the minimum number of coins for j=12 using only coin {1}.
+	// C[3][12] gives us the minimum number of coins for j=12 using coins {1, 6, 10}.
+	
+	//For each coin from i to n we can choose whether to include it or not. 
+	//If we do not include a coin then the minimum is the minimum from the previous coin.
+	//minimum(j) = C[i-1][j] 
+	//eg not including coin i=3(10) for j=12
+	//minimum(j) = C[3-1][12] = C[2][12] = 2
+	
+	//If we include a coin, then the minimum is the current coins last minimum at (j-coin value)
+	//plus one to denote the current coin.
+	//minimum(j) = C[i][j-i(value)] + 1
+	//eg including coin i=3(10) for j=12
+	//minimum(j) = C[3][12-10] + 1 = C[3][2] + 1 = 2 + 1 = 3
 	
 	public static void main(String args[]){
 		
