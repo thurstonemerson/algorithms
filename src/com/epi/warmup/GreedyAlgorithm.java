@@ -55,6 +55,23 @@ public class GreedyAlgorithm {
 		return x;
 	}
 	
+	//The greedy algorithm will not work for all denominations of money. 
+	//For example with coins {1, 6, 10} and a sum j of 12, the greedy algorithm
+	//will return the answer 3 using coins {10, 1, 1} whereas the true minimum is 2 {6, 6}. 
+	
+	//We require a dynamic programming algorithm for the generic case of finding the minimum of coins
+	//to make change for a sum j where the coin denomination is denom[1] > denom[2] > ··· > denom[n] = 1.
+	
+	//C[i][j] can denote the minimum of coins required to make change for the amount j
+	//with coins i to n.
+	//                      j
+	//          0 1 2 3 4 5 6 7 8 9 10 11 12
+	//   1(10)  0 1 2 3 4 5 1 2 3 4  1  2  2
+	// i 2 (6)  0 1 2 3 4 5 1 2 3 4  5  6  2
+	//   3 (1)  0 1 2 3 4 5 6 7 8 9 10 11 12
+	
+	//For example C[3][12] gives us the minimum number of coins for j=12 using only coin {1}.
+	// C[1][12] gives us the minimum number of coins for j=12 using coins {1, 6, 10}
 	
 	public static void main(String args[]){
 		
