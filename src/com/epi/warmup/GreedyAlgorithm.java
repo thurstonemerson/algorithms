@@ -89,6 +89,10 @@ public class GreedyAlgorithm {
 	//then obviously we are not going to include it. Otherwise we must calculate both and
 	//use the minimum value.
 	
+	//Time complexity of this algorithm is O(MN) where M is the number of coins in the denomination
+	//and n is the sum j. We create a double array of coin.length and n values, so the space
+	//complexity is also O(MN).
+	
 	public static int minNoOfCoins_dynamic(int n, int[] coins){
 	
 		//assert n is greater than 0, there are coins specified, and first coin = 1
