@@ -145,8 +145,10 @@ public class GreedyAlgorithm {
 		return M[coins.length-1][n];
 	}
 	
-	//Discussion of recursive algorithm
-	
+	//This recursive algorithm makes overlapping calls and has a time 
+	//complexity of O(m^n) - exponential - where m is the number of 
+	//coins in the denominations and n is the change we are trying to make
+	//hence this alogithm is very slow
 	public static int minNoOfCoins_recursive(int val, int[] coins){
 		
 		int min = val;
