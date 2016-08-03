@@ -1,5 +1,7 @@
 package com.epi.warmup;
 
+import java.util.Arrays;
+
 
 public class GreedyAlgorithm {
 //	Greedy Algorithms and Invariants: Write a program that takes an input a positive integer
@@ -7,8 +9,6 @@ public class GreedyAlgorithm {
 //	N = 37, the answer is 4, corresponding to a quarter, a dime, and two pennies.
 // coins = {1, 5, 10, 25, 50, 100}
 
-	//What to do if there is no solution?
-	//What are the time complexities of the following loops?
 	// Greedy solution:
 	//ID 1: - While N > 0
 	//      - x = largest coin that <= N
@@ -19,6 +19,7 @@ public class GreedyAlgorithm {
 	//       (or)
 	//      - counter = counter + (n/x)
 	//      - N = N mod x
+	// Time complexity is Big O(N)
 	
 	private static final int[] US_COINS = {1, 5, 10, 25, 50, 100};
 	
@@ -144,6 +145,37 @@ public class GreedyAlgorithm {
 		return M[coins.length-1][n];
 	}
 	
+	//Discussion of recursive algorithm
+	
+	public static int minNoOfCoins_recursive(int val, int[] coins){
+		
+		int min = val;
+		
+		//no coins necessary
+		if (val <= 0){
+			return 0;
+		}
+		
+		//can we make change with a single coin
+		for (int i = 0; i< coins.length; i++){
+			if (coins[i] == val){
+				return 1;
+			}
+		}
+		
+		for (int i = 0; i< coins.length; i++){
+			if (coins[i] < val){
+				int coinNo = 1 + minNoOfCoins_recursive(val - coins[i], coins);
+				if (coinNo < min){
+					min = coinNo;
+				}
+			}
+		}
+		
+		System.out.println("For val " + val + " min is " + min);
+		return min;
+	}
+	
 	public static void main(String args[]){
 		
 		assert(minNoOfCoins_greedy(37, US_COINS) == 4);
@@ -162,6 +194,10 @@ public class GreedyAlgorithm {
 		//and the dynamic programming algorithm gives a correct answer
 		assert(minNoOfCoins_dynamic(12, new int[]{1, 6, 10}) == 2);
 		assert(minNoOfCoins_greedy(12, new int[]{1, 6, 10}) == 3);
+		
+		assert(minNoOfCoins_recursive(1, US_COINS) == 1);
+		assert(minNoOfCoins_recursive(5, US_COINS) == 1);
+		assert(minNoOfCoins_recursive(37, US_COINS) == 4);
 		
 	}
 	
