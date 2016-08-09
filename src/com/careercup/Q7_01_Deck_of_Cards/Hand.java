@@ -1,4 +1,4 @@
-package Q7_01_Deck_of_Cards;
+package com.careercup.Q7_01_Deck_of_Cards;
 
 import java.util.ArrayList;
 
