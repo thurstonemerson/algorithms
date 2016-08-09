@@ -216,7 +216,7 @@ public class GreedyAlgorithm {
 		}
 
 		// otherwise let us find the minimum
-		int min = val;
+		int min = Integer.MAX_VALUE;
 
 		for (int i = 0; i < coins.length; i++) {
 			if (coins[i] < val) {
