@@ -195,6 +195,8 @@ public class GreedyAlgorithm {
 		return min;
 	}
 
+	//Recursive version with memoization caches each value as it is calculated
+	//therefore the time complexity of this algorithm is O(NxM)
 	public static int minNoOfCoins_recursiveWithMemoization(int val,
 			int[] coins, int[] M) {
 
