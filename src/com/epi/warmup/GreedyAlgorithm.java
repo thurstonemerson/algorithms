@@ -71,11 +71,11 @@ public class GreedyAlgorithm {
 	// M[i][j] can denote the minimum of coins required to make change for the
 	// amount j
 	// with coins i to n.
-	// j
-	// 0 1 2 3 4 5 6 7 8 9 10 11 12
-	// 0 (1) 0 1 2 3 4 5 6 7 8 9 10 11 12
+	//          j
+	//   0 1 2 3 4 5 6 7 8 9 10 11 12
+	//   0 (1) 0 1 2 3 4 5 6 7 8 9 10 11 12
 	// i 1 (6) 0 1 2 3 4 5 1 2 3 4 5 6 2
-	// 2(10) 0 1 2 3 4 5 1 2 3 4 1 2 2
+	//   2(10) 0 1 2 3 4 5 1 2 3 4 1 2 2
 
 	// For example M[0][12] gives us the minimum number of coins for j=12 using
 	// only coin {1}.
