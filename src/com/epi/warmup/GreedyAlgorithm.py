@@ -74,6 +74,34 @@ following constraints:
    
    '''
    
+def min_coin_change_memoization(N, M, coin_set):   
+    
+   
+   #1) Base case if N <= 0 then return 0 (No coins can be used to make change)
+   if N <= 0:
+       return 0
+   
+   if M[N] is not None:
+       return M[N]
+   
+   #2) Base case if N == a coin value in the set then return 1 (exactly one coin can be used)
+   for coin_val in coin_set:
+       if N == coin_val:
+           M[N] = 1
+           return 1
+       
+   min = N
+       
+   #3) Otherwise return the minimum of 1 + recursivefunction(N - coin value) for each coin
+   for coin_val in coin_set:
+       val = 1 + min_coin_change_memoization(N - coin_val, M, coin_set)
+       if val < min:
+           min = val
+           M[N] = min
+           
+   return M[N]
+   
+   
 
 def min_coin_change_DP(N, coin_set):
     
@@ -96,4 +124,5 @@ def min_coin_change_DP(N, coin_set):
 if __name__ == "__main__":
        
     assert(min_coin_change_DP(12, [1, 6, 10]) == 2)
+    assert(min_coin_change_memoization(12, [None]*13, [1, 6, 10]) == 2)
 
