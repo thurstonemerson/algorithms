@@ -57,7 +57,7 @@ following constraints:
    Generate a DP table M[i][j] where i is all coins in the coin set from 0 to i, and j is every 
    value from 0 to N 
    
-   1) Base case for all coins 0 to i, set M[i][0] = 0 and M[i][1] = 1
+   1) Base case for all coins 0 to i, set M[i][0] = 0 and M[0][j] = j
    (When j is 0 no coins can be used to make change, and when is j only coin 1 can be used)
    2) From 1 to j inclusive
        From 1 to i 
@@ -73,4 +73,27 @@ following constraints:
    this DP algorithm is the most efficient for the minimum coin change problem.
    
    '''
+   
+
+def min_coin_change_DP(N, coin_set):
+    
+    M = [[0 for i in range(N+1)] for j in range(len(coin_set))]
+    
+    #Base case, where i = 0 then minimum coins is the same as j
+    for j in range(N+1):
+       M[0][j] = j
+       
+    for j in range(1, N+1):
+        for i in range(1, len(coin_set)):
+            if coin_set[i] > j:
+                M[i][j] = M[i-1][j] 
+            else:
+                M[i][j] = min(M[i-1][j], 1+M[i][j - coin_set[i]])
+    
+    print M
+    return M.pop().pop()
+   
+if __name__ == "__main__":
+       
+    assert(min_coin_change_DP(12, [1, 6, 10]) == 2)
 
