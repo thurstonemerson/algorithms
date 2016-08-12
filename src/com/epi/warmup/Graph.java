@@ -17,8 +17,22 @@ public class Graph {
 		}
 	}
 	
+	public static void depthFirstSearch(Node node){
+		
+	}
+	
 	public static void main(String args[]){
 		
+		Node root = new Node(0);
+		Node one = new Node(1);
+		Node four = new Node(4);
+		Node five = new Node(5);
+		Node three = new Node(5);
+		Node two = new Node(5);
+		root.children = new Node[]{one, four, five};
+		one.children = new Node[]{two, three, four};
+		three.children = new Node[]{two, four};
+		depthFirstSearch(root);
 	}
 	
 	
