@@ -2,19 +2,19 @@ package com.epi.warmup;
 
 import java.util.EmptyStackException;
 
-public class Queue {
+public class Queue<T> {
 	
-	private QueueNode top = null;
-	private QueueNode bottom = null;
+	private QueueNode<T> top = null;
+	private QueueNode<T> bottom = null;
 
 	public Queue() {
 	}
 
-	private class QueueNode {
-		public int data;
-		public QueueNode next;
+	private class QueueNode<T>  {
+		public T data;
+		public QueueNode<T> next;
 
-		public QueueNode(int data) {
+		public QueueNode(T data) {
 			this.data = data;
 		}
 	}
@@ -24,8 +24,8 @@ public class Queue {
 	}
 
 	//add an item to the top of the queue
-	public void add(int data) {
-		QueueNode newNode = new QueueNode(data);
+	public void add(T data) {
+		QueueNode<T> newNode = new QueueNode<T>(data);
 		newNode.next = null;
 		
 		//point previous top to new node
@@ -41,9 +41,9 @@ public class Queue {
 	}
 
 	//remove an item from the bottom of the queue
-	public int remove() {
+	public T remove() {
 		if (isEmpty()) throw new EmptyStackException();
-		int data = bottom.data;
+		T data = bottom.data;
 		bottom = bottom.next;
 		return data;
 	}
@@ -52,7 +52,7 @@ public class Queue {
 	public static void main(String args[]) {
 
 		//test queue implementation
-		Queue queue = new Queue();
+		Queue<Integer> queue = new Queue<Integer>();
 		queue.add(3);
 		queue.add(2);
 		queue.add(1);
