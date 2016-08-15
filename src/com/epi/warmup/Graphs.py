@@ -21,3 +21,45 @@ following constraints:
 ''' 
    Graphs: Implement Depth First Search and Breadth First Search. (You will need to implement
             classes suitable to representing graphs.)'''
+            
+class Node:
+    def __init__(self, data):
+        self.neighbours = None
+        self.data = data
+        self.marked = False
+
+def depth_first_search(node):
+    
+    visit(node)
+    
+    if node.neighbours is None:
+        return
+    
+    for neighbour in node.neighbours:
+        if neighbour.marked is False:
+            depth_first_search(neighbour)
+
+def visit(node):
+    node.marked = True
+    print node.data
+    
+ 
+if __name__ == "__main__":
+    zero = Node(0)
+    one = Node(1)
+    two = Node(2)
+    three = Node(3)
+    four = Node(4)
+    five = Node(5)
+    six = Node(6)
+    
+    zero.neighbours = [one, four, five]
+    one.neighbours = [three, four]
+    two.neighbours = [one]
+    three.neighbours = [two, four]
+    five.neighbours = [six]
+    
+    depth_first_search(zero)
+    
+            
+            
