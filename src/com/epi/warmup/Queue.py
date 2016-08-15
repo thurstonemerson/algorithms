@@ -62,5 +62,6 @@ if __name__ == "__main__":
     assert(q.remove() == 1)
     assert(q.remove() == 2)
     assert(q.remove() == 3)
+    assert(q.is_empty() == True)
     
     
