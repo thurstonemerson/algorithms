@@ -27,13 +27,19 @@ import threading
 
 current = 1
 lock = threading.Lock()
-max = 10
 
 class PrintEven(threading.Thread):
+    
+    def __init__(self, max):
+        threading.Thread.__init__(self)
+        self.max = max
+    
     def run(self):
         while(True):
+            global current
+            global lock
             lock.acquire()
-            if current > max:
+            if current > self.max:
                 return
             if (current % 2 == 0):
                 print current
@@ -41,8 +47,15 @@ class PrintEven(threading.Thread):
             lock.release()
         
 class PrintOdd(threading.Thread):
+    
+    def __init__(self, max):
+        threading.Thread.__init__(self)
+        self.max = max
+        
     def run(self):
         while(True):
+            global current
+            global lock
             lock.acquire()
             if current > max:
                 return
@@ -52,10 +65,16 @@ class PrintOdd(threading.Thread):
             lock.release()
 
 if __name__ == "__main__":
-    printEven = PrintEven()
-    printOdd = PrintOdd()
+    
+    max = 10
+    
+    printEven = PrintEven(max)
+    printOdd = PrintOdd(max)
     
     printEven.start()
     printOdd.start()
+    printEven.join()
+    printOdd.join()
+    
     
    
