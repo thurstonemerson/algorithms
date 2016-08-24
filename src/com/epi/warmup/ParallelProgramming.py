@@ -17,6 +17,7 @@ following constraints:
  
 @author: Jessica
 '''
+from Queue import Queue
 
 ''' 
 Parallel Computing: Write a program which uses two threads to print the numbers from
@@ -25,51 +26,58 @@ Parallel Computing: Write a program which uses two threads to print the numbers 
 
 import threading
 
-current = 1
-
 class PrintEven(threading.Thread):
     
-    def __init__(self, max, lock):
+    def __init__(self, max, lock, queue):
         threading.Thread.__init__(self)
         self.max = max
         self.lock = lock
+        self.queue = queue
     
     def run(self):
         while(True):
-            global current
-            lock.acquire()
+            self.lock.acquire()
+            current = queue.peek()
             if current > self.max:
                 return
             if (current % 2 == 0):
                 print current
                 current=current+1
-            lock.release()
+                self.queue.remove()
+                self.queue.add(current)
+            self.lock.release()
         
 class PrintOdd(threading.Thread):
     
-    def __init__(self, max, lock):
+    def __init__(self, max, lock, queue):
         threading.Thread.__init__(self)
         self.max = max
         self.lock = lock
+        self.queue = queue
         
     def run(self):
         while(True):
-            global current
-            lock.acquire()
+            self.lock.acquire()
+            current = self.queue.peek()
             if current > max:
                 return
             if (current % 2 != 0):
                 print current
                 current=current+1
-            lock.release()
+                self.queue.remove()
+                self.queue.add(current)
+            self.lock.release()
 
 if __name__ == "__main__":
     
     max = 10
+    current = 1
     lock = threading.Lock()
+    queue = Queue()
+    queue.add(current)
     
-    printEven = PrintEven(max, lock)
-    printOdd = PrintOdd(max, lock)
+    printEven = PrintEven(max, lock, queue)
+    printOdd = PrintOdd(max, lock, queue)
     
     printEven.start()
     printOdd.start()
