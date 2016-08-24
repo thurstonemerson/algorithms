@@ -4,26 +4,44 @@ package com.epi.warmup;
 //1 to 100 in order. One thread can only print odd numbers, the other can only print even numbers.
 public class ParallelProgramming {
 	
-	private Object lock = new Object();
+	private static Object lock = new Object();
 
 	public static void main(String args[]) {
 
 		Thread printEven = new Thread(new Runnable(){
 			public void run(){
 				for (int x = 2; x <= 10; x+=2){
-					System.out.println(x);
+					synchronized(lock){
+						try {
+							lock.notifyAll();
+							lock.wait();
+							System.out.println(x);
+						} catch (Exception e) {
+							// TODO Auto-generated catch block
+							e.printStackTrace();
+						}
+					}
 				}
 		}});
 		Thread printOdd = new Thread(new Runnable(){
 			public void run(){
 				for (int x = 1; x <= 9; x+=2){
-					System.out.println(x);
+					synchronized(lock){
+						try {
+							lock.wait();
+							lock.notifyAll();
+							System.out.println(x);
+						} catch (InterruptedException e) {
+							// TODO Auto-generated catch block
+							e.printStackTrace();
+						}
+					}
 				}
 				
 		}});
-		
-		printEven.start();
+
 		printOdd.start();
+		printEven.start();
 
 	}
 }
