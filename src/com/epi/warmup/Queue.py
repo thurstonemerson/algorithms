@@ -26,6 +26,14 @@ class Queue:
     def is_empty(self):
         return self.bottom is None    
     
+    
+    '''Peek at the first item on the queue'''
+    def peek(self):
+        if self.is_empty():
+            raise ValueError("Queue is empty")
+        data = self.bottom.data
+        return data
+    
     '''Add a new item into the queue '''
     def add(self, data):
         new_node = self.QueueNode(data)
@@ -43,7 +51,6 @@ class Queue:
         self.bottom = self.bottom.next
         if self.bottom is None:
             self.top = None
-        print data
         return data
 
     '''Single node within a stack'''
@@ -61,6 +68,7 @@ if __name__ == "__main__":
     
     assert(q.remove() == 1)
     assert(q.remove() == 2)
+    assert(q.peek() == 3)
     assert(q.remove() == 3)
     assert(q.is_empty() == True)
     
