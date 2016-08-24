@@ -26,18 +26,17 @@ Parallel Computing: Write a program which uses two threads to print the numbers 
 import threading
 
 current = 1
-lock = threading.Lock()
 
 class PrintEven(threading.Thread):
     
-    def __init__(self, max):
+    def __init__(self, max, lock):
         threading.Thread.__init__(self)
         self.max = max
+        self.lock = lock
     
     def run(self):
         while(True):
             global current
-            global lock
             lock.acquire()
             if current > self.max:
                 return
@@ -48,14 +47,14 @@ class PrintEven(threading.Thread):
         
 class PrintOdd(threading.Thread):
     
-    def __init__(self, max):
+    def __init__(self, max, lock):
         threading.Thread.__init__(self)
         self.max = max
+        self.lock = lock
         
     def run(self):
         while(True):
             global current
-            global lock
             lock.acquire()
             if current > max:
                 return
@@ -67,9 +66,10 @@ class PrintOdd(threading.Thread):
 if __name__ == "__main__":
     
     max = 10
+    lock = threading.Lock()
     
-    printEven = PrintEven(max)
-    printOdd = PrintOdd(max)
+    printEven = PrintEven(max, lock)
+    printOdd = PrintOdd(max, lock)
     
     printEven.start()
     printOdd.start()
