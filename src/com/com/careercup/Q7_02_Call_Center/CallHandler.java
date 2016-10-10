@@ -1,4 +1,4 @@
-package Q7_02_Call_Center;
+package com.com.careercup.Q7_02_Call_Center;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -22,7 +22,7 @@ public class CallHandler {
      */
     List<List<Employee>> employeeLevels;
 
-	/* queues for each call�s rank */
+	/* queues for each call���s rank */
     List<List<Call>> callQueues; 
 
     public CallHandler() {

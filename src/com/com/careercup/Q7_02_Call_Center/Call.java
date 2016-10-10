@@ -1,4 +1,4 @@
-package Q7_02_Call_Center;
+package com.com.careercup.Q7_02_Call_Center;
 
 /* Represents a call from a user. Calls have a minimum rank and are assigned to the
  * first employee who can handle that call.

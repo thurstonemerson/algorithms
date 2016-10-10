@@ -1,4 +1,4 @@
-package Q7_02_Call_Center;
+package com.com.careercup.Q7_02_Call_Center;
 
 class Director extends Employee {
     public Director(CallHandler callHandler) {
