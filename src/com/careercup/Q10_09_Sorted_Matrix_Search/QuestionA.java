@@ -1,4 +1,4 @@
-package Q10_09_Sorted_Matrix_Search;
+package com.careercup.Q10_09_Sorted_Matrix_Search;
 import CtCILibrary.*;
 
 public class QuestionA {

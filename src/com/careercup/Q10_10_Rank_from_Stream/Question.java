@@ -1,4 +1,4 @@
-package Q10_10_Rank_from_Stream;
+package com.careercup.Q10_10_Rank_from_Stream;
 
 import CtCILibrary.AssortedMethods;
 

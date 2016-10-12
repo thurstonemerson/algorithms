@@ -1,4 +1,4 @@
-package Q10_07_Missing_Int;
+package com.careercup.Q10_07_Missing_Int;
 
 import java.io.FileNotFoundException;
 import java.io.FileReader;

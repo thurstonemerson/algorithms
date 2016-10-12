@@ -1,4 +1,4 @@
-package Q10_02_Group_Anagrams;
+package com.careercup.Q10_02_Group_Anagrams;
 
 import java.util.ArrayList;
 import java.util.Arrays;
