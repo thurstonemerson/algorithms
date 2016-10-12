@@ -1,4 +1,4 @@
-package Q10_11_Peaks_and_Valleys;
+package com.careercup.Q10_11_Peaks_and_Valleys;
 
 import CtCILibrary.AssortedMethods;
 
