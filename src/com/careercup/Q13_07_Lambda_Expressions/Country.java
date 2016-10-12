@@ -1,4 +1,4 @@
-package Q13_07_Lambda_Expressions;
+package com.careercup.Q13_07_Lambda_Expressions;
 
 public class Country {
 	private String name;
